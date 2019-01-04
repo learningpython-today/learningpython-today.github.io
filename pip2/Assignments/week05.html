@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Activities: Week 5 &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Activities: Week 6 (through fall break)" href="week06.html" />
+    <link rel="prev" title="Activities: Week 4" href="week04.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Activities: Week 5</a><ul>
+<li><a class="reference internal" href="#problem-set">Problem Set</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Activities: Week 4" data-toggle="tooltip">
+    <a href="week04.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Activities: Week 6 (through fall break)' data-toggle="tooltip" >
+    <a href="week06.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="activities-week-5">
+<h1>Activities: Week 5<a class="headerlink" href="#activities-week-5" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><strong>Before Tuesday’s class:</strong><ul>
+<li><em>Review</em> <a class="reference internal" href="../Functions/FunctionDefinitions.html#functions-chap"><span class="std std-ref">Functions</span></a> (recommended)</li>
+<li>Read <a class="reference internal" href="../OptionalAndKeywordParameters/OptionalParameters.html#optional-params-chap"><span class="std std-ref">Optional and Keyword Parameters</span></a></li>
+</ul>
+</li>
+<li><strong>Before Thursday’s class:</strong><ul>
+<li>Read <a class="reference internal" href="../Tuples/Tuples.html#tuples-chap"><span class="std std-ref">Tuples</span></a></li>
+<li>Read <a class="reference internal" href="../Sort/intro-SortingwithSortandSorted.html#sort-chap"><span class="std std-ref">Sorting in Python</span></a></li>
+<li>You may also want to review <a class="reference internal" href="../DictionaryAccumulation/intro-AccumulatingMultipleResultsInaDictionary.html#dictionary-accum-chap"><span class="std std-ref">Dictionary Accumulation</span></a>, or previous Dictionary Accumulation exercises</li>
+</ul>
+</li>
+<li><strong>Before Sunday at 11:59 PM:</strong><ul>
+<li>Complete all of the below <a class="reference internal" href="#problem-set-4"><span class="std std-ref">Problem Set 4</span></a> and the Demonstrate Your Understanding assignment for week 5.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="problem-set">
+<h2>Problem Set<a class="headerlink" href="#problem-set" title="Permalink to this headline">¶</a></h2>
+
+<div data-childcomponent="ps_3_02" class="runestone explainer ac_section alert alert-warning">
+<p><strong>This problem encountered technical difficulties in our textbook, so codelens shows the correct result of invoking this function, but running the function in the textbook does not always. As a result, EVERYONE will get some free points for this problem. You do not need to worry about solving it</strong>, but it is worth spending a little bit of time checking it out and thinking about it!</p>
+<p>—</p>
+<p>Below is a function definition. <strong>DO NOT</strong> change it!</p>
+<p>We have also provided some invocations of that function. Run those and see what they do.</p>
+<p>Below the comment provided in the code window, write a few calls to this function yourself, with whatever appropriate input you want.</p>
+<p>Finally, write a few sentences in comments in the code window that explain what’s happening in this function called list_end_with_string. You should explain what happens if a list like <code class="docutils literal notranslate"><span class="pre">l</span></code> gets input into this function AND what happens if a list like <code class="docutils literal notranslate"><span class="pre">b</span></code> gets input into it.</p>
+<p>Don’t forget to run it and save!</p>
+
+<textarea data-component="activecode" id=ps_3_02 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# Function definition
+def list_end_with_string(new_list):
+    if type(new_list[-1]) == type("hello"):
+        return new_list
+    new_list.append("the last element is a string no matter what now!")
+    return new_list
+
+# Some function calls and lines that print out the results
+l = [3,46,6]
+b = [4,"hi",10,"12",12,123,"whoa!"]
+print(list_end_with_string([1,2]))
+print(list_end_with_string(l))
+print(list_end_with_string(b))
+
+# Now write a couple invocations of this function yourself below this line.
+
+
+# Write your comments here.
+</textarea>
+</div>
+
+<div data-childcomponent="ps_4_01" class="runestone explainer ac_section alert alert-warning">
+We’ve given you another data file in this problem. It’s called <code class="docutils literal notranslate"><span class="pre">timely_file.txt</span></code>. Write code to figure out which is the most common word in the file. Save the string that is most common word in the file in the variable <code class="docutils literal notranslate"><span class="pre">abc</span></code>. (Hint: you had a problem quite similar to this one in PS3!) You may write a function to help do this, AND invoke the function, if you do so – but you do not have to.
+<textarea data-component="activecode" id=ps_4_01 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio='timely_file.txt*atype*'   
+          >
+# Write code here!
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testCode(self):
+      self.assertNotIn("= 'the'", self.getEditorText(), "Testing code input (Don't worry about actual and expected values)")
+      self.assertIn("open",self.getEditorText(),"Testing that you have probably opened the file (Don't worry about actual and expected values)")
+
+   def testOne(self):
+      self.assertEqual(abc, 'the', "testing whether abc is set correctly.")
+
+myTests().main()
+</textarea>
+</div>
+
+<div data-childcomponent="ps_3_06" class="runestone explainer ac_section alert alert-warning">
+Define a function <code class="docutils literal notranslate"><span class="pre">is_prefix</span></code> that takes two strings as inputs and returns the boolean value <code class="docutils literal notranslate"><span class="pre">True</span></code> if the first string is a prefix of the second string, but returns the boolean value <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise. You can assume the first string will always be shorter than, or the same length as, the second string.
+<textarea data-component="activecode" id=ps_3_06 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# Define your function here.
+
+
+# Here's a couple example function calls, printing the return value
+# to show you what it is.
+print(is_prefix("He","Hello")) # should print True
+print(is_prefix("Hello","He")) # should print False
+print(is_prefix("Hi","Hello")) # should print False
+print(is_prefix("lo","Hello")) # should print False
+print(is_prefix("Hel","Hello")) # should print True
+print(is_prefix("Hello","Hello")) # should print True
+# Remember, these won't work at all until you have defined a function called is_prefix
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(is_prefix("Big", "Bigger"), True, "Testing whether 'Big' is a prefix of 'Bigger'")
+   def testTwo(self):
+      self.assertEqual(is_prefix("Bigger", "Big"), False, "Testing whether 'Bigger' is a prefix of 'Big'")
+   def testThree(self):
+      self.assertEqual(is_prefix('ge', 'Bigger'), False, "Testing whether 'ge' is a prefix of 'Bigger'")
+   def testFour(self):
+      self.assertEqual(is_prefix('Bigge', "Bigger"), True, "Testing whether 'Bigge' is a prefix of 'Bigger'")
+   def testFive(self):
+      self.assertEqual(is_prefix("Bigger","Bigger"),True,"Testing whether 'Bigger' counts as a prefix of 'Bigger'")
+   def testSix(self):
+      self.assertEqual(is_prefix("big","Bigger"),False,"Testing whether 'big' is a prefix of 'Bigger'")
+   def testSeven(self):
+      self.assertEqual(is_prefix("Biggerxyz","Bigger"),False,"Testing whether 'Biggerxyz' is a prefix of 'Bigger'")
+
+myTests().main()
+</textarea>
+</div>
+<p>In the next few questions, you’ll build components and then a complete program that lets people play Hangman.</p>
+<p>Below is an image from the middle of a game…</p>
+<img alt="Assignments/Figures/HangmanSample.JPG" src="Assignments/Figures/HangmanSample.JPG" />
+<p>Your first task is just to understand the logic of the program, by matching up elements of the flow chart above with elements of the code below. In later problems, you’ll fill in a few details that aren’t fully implemented here.</p>
+<p>You may find it helpful to run this program in order to understand it. It will tell you feedback about your last guess, but won’t tell you where the correct letters were or how much health you have in the game, and it won’t stop if you guess all the letters, so you can’t <em>really</em> play with this version of the code here. (It can also go on for a very long time, until you exceed the time limit in the code window, unless you cancel it yourself.) Allowing the game to do those things (manage health, show you the word you’ve guessed so far) comes from code you will write in later problems!</p>
+
+<div data-childcomponent="ps_4_hangman_code" class="runestone explainer ac_section alert alert-warning">
+<strong>The next few questions are based on this code/set of ideas.</strong> This is the base code for a Hangman game, without some of the important useful functionality, as you’ll be building it! (If you have never played Hangman, you can go to <code class="docutils literal notranslate"><span class="pre">https://en.wikipedia.org/wiki/Hangman_(game)</span></code> for an explanation of what it is.) There is (or will be) a flow chart image of the process of this code also available, which may be helpful to refer to as you try to understand the code.
+<textarea data-component="activecode" id=ps_4_hangman_code data-lang="python" 
+    data-hidecode="true"  data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+def blanked(word, guesses):
+    return "blanked word" # Placeholder
+
+def health_prompt(x, y):
+    return "health prompt" # Placeholder
+
+def game_state_prompt(txt ="Nothing", h = 6, m_h = 6, word = "HELLO", guesses = ""):
+    res = "\n" + txt + "\n"
+    res = res + health_prompt(h, m_h) + "\n"
+    if guesses != "":
+        res = res + "Guesses so far: " + guesses.upper() + "\n"
+        res = res + "Word: " + blanked(word, guesses) + "\n"
+    else:
+        res = res + "No guesses so far" + "\n"
+        res = res + "Word: " + blanked(word, guesses) + "\n"
+
+    return(res)
+
+def main():
+    max_health = 3
+    health = max_health
+    secret_word = input("What's the word to guess? (Don't let the player see it!)")
+    secret_word = secret_word.upper() # everything in all capitals to avoid confusion
+    guesses_so_far = ""
+    game_over = False
+
+    feedback = "let's get started"
+
+    # Now interactively ask the user to guess
+    while not game_over:
+        prompt = game_state_prompt(feedback, health, max_health, secret_word, guesses_so_far)
+        next_guess = input(prompt)
+        next_guess = next_guess.upper()
+        feedback = ""
+        if len(next_guess) != 1:
+            feedback = "I only understand single letter guesses. Please try again."
+        elif next_guess in guesses_so_far:
+            feedback = "You already guessed that"
+        else:
+            guesses_so_far = guesses_so_far + next_guess
+            if next_guess in secret_word:
+                if blanked(secret_word, guesses_so_far) == secret_word:
+                   feedback = "Congratulations"
+                   game_over = True
+                else:
+                    feedback = "Yes, that letter is in the word"
+            else: # next_guess is not in the word secret_word
+                feedback = "Sorry, " + next_guess + " is not in the word."
+                health = health - 1
+                if health <= 0:
+                    feedback = " Waah, waah, waah. Game over."
+                    game_over= True
+
+    print(feedback)
+    print("The word was..." + secret_word)
+
+import sys #don't worry about this line; you'll understand it next week
+sys.setExecutionLimit(60000)     # let the game take up to a minute, 60 * 1000 milliseconds
+main() # invoke the main() game function
+</textarea>
+</div>
+<p>See the flow chart below for a better understanding of what’s happening in the code for the Hangman game overall. Your first task is just to understand the logic of the program, by matching up elements of the flow chart above with single numeric lines of the code below (which line of code corresponds to the box?). Answer in comments, below. <strong>Each answer should be no more than 2 numbers that represent lines of code. Each question can be answered with 1 or 2 line numbers!</strong></p>
+<p>In later problems, you’ll fill in a few details that aren’t fully implemented in the code above.</p>
+<img alt="Assignments/Figures/HangmanFlowchart.jpg" src="Assignments/Figures/HangmanFlowchart.jpg" />
+
+<div data-childcomponent="ps_4_02" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ps_4_02 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# What line(s) of code in the above code window do what's mentioned in the flowchart's Box 1?
+
+# What line(s) of code do what's mentioned in Box 2?
+
+#What line(s) of code do what's mentioned in Box 3?
+
+# What line(s) of code do what's mentioned in Box 4?
+
+# What line(s) of code do what's mentioned in Box 5?
+
+# What line(s) of code do what's mentioned in Box 6?
+
+# What line(s) of code do what's mentioned in Box 7?
+
+# What line(s) of code do what's mentioned in Box 8?
+
+# What line(s) of code do what's mentioned in Box 9?
+
+# What line(s) of code do what's mentioned in Box 10?
+
+# What line(s) of code do what's mentioned in Box 11?
+</textarea>
+</div>
+
+<div data-childcomponent="ps_4_03" class="runestone explainer ac_section alert alert-warning">
+<p>The next task you have is to create a correct version of the <code class="docutils literal notranslate"><span class="pre">blanked</span></code> function. It should take 2 inputs: a word, and a string of the letters that have been guessed already.</p>
+<p>It should return a string with the same number of characters as the word, but with the UNrevealed characters replaced by an underscore (a <code class="docutils literal notranslate"><span class="pre">_</span></code>).</p>
+<p><strong>HINT:</strong> Iterate through the letters in the word, accumulating characters as you go. If you try to iterate through the guesses, it’s harder.</p>
+
+<textarea data-component="activecode" id=ps_4_03 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# Define your function here.
+
+
+# Sample calls to this function
+# (Remember, these won't work until you define the function blanked)
+print(blanked("hello", "elj"))
+#should output _ell_
+print(blanked("almost","amsvr"))
+# should output a_m_s_
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(blanked('hello', 'elj'), "_ell_", "testing blanking of hello when e,l, and j have been guessed.")
+   def testTwo(self):
+      self.assertEqual(blanked('hello', ''), '_____', "testing blanking of hello when nothing has been guessed.")
+   def testThree(self):
+      self.assertEqual(blanked('ground', 'rn'), '_r__n_', "testing blanking of ground when r and n have been guessed.")
+   def testFour(self):
+      self.assertEqual(blanked('almost', 'vrnalmqpost'), 'almost', "testing blanking of almost when all the letters have been guessed.")
+
+myTests().main()
+</textarea>
+</div>
+
+<div data-childcomponent="ps_4_04" class="runestone explainer ac_section alert alert-warning">
+Now you have to create a good version of the <code class="docutils literal notranslate"><span class="pre">health_prompt</span></code> function: Define a function called <code class="docutils literal notranslate"><span class="pre">health_prompt</span></code>. The first parameter should be the current health the player has (an integer), and the second parameter should be the maximum health a player can have (an integer). The function should return a string with <code class="docutils literal notranslate"><span class="pre">+</span></code> signs for the current health, and <code class="docutils literal notranslate"><span class="pre">-</span></code> signs for the health that has been lost so far.
+<textarea data-component="activecode" id=ps_4_04 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# Define your function here.
+
+
+
+
+# Sample invocations of the function.
+
+print(health_prompt(3, 7))
+#this statement should produce the output
+#health: +++----
+
+print(health_prompt(0, 4))
+#this statement should produce the output
+#health: ----
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def testOne(self):
+     self.assertEqual(health_prompt(3,7), "+++----", "Testing health_prompt(3,7)")
+  def testTwo(self):
+     self.assertEqual(health_prompt(0,4), "----", "Testing health_prompt(0,4)")
+  def testThree(self):
+     self.assertEqual(health_prompt(5,5), "+++++", "Testing health_prompt(5,5)")
+
+myTests().main()
+</textarea>
+</div>
+<p>In class, you’ll see these things all put together. Soon, you’ll put these together yourself and run your completed hangman program on your own computer, instead of in the textbook.</p>
+<p>To run the whole program, with the functions you built in questions above, paste the <code class="docutils literal notranslate"><span class="pre">health_prompt</span></code> function and the <code class="docutils literal notranslate"><span class="pre">blanked</span></code> function at the very top of the code box provided below:</p>
+
+<div data-childcomponent="ps_4_hangman_code_complete" class="runestone explainer ac_section alert alert-warning">
+This is the base code for a Hangman game, without some of the important useful functionality – but now, you can add it in! (If you have never played Hangman, you can go to <code class="docutils literal notranslate"><span class="pre">https://en.wikipedia.org/wiki/Hangman_(game)</span></code> for an explanation of what it is.) You should paste or retype your functions in where indicated at the top, and try running this, for points on this problem.
+<textarea data-component="activecode" id=ps_4_hangman_code_complete data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# Paste your functions here..
+
+# health_prompt:
+
+# blanked:
+
+
+def game_state_prompt(txt ="Nothing", h = 6, m_h = 6, word = "HELLO", guesses = ""):
+    res = "\n" + txt + "\n"
+    res = res + health_prompt(h, m_h) + "\n"
+    if guesses != "":
+        res = res + "Guesses so far: " + guesses.upper() + "\n"
+        res = res + "Word: " + blanked(word, guesses) + "\n"
+    else:
+        res = res + "No guesses so far" + "\n"
+        res = res + "Word: " + blanked(word, guesses) + "\n"
+
+    return res
+
+def main():
+    max_health = 3
+    health = max_health
+    secret_word = input("What's the word to guess? (Don't let the player see it!)")
+    secret_word = secret_word.upper() # everything in all capitals to avoid confusion
+    guesses_so_far = ""
+    game_over = False
+
+    feedback = "let's get started"
+
+    # Now interactively ask the user to guess
+    while not game_over:
+        prompt = game_state_prompt(feedback, health, max_health, secret_word, guesses_so_far)
+        next_guess = input(prompt)
+        next_guess = next_guess.upper()
+        feedback = ""
+        if len(next_guess) != 1:
+            feedback = "I only understand single letter guesses. Please try again."
+        elif next_guess in guesses_so_far:
+          feedback = "You already guessed that"
+        else:
+            guesses_so_far = guesses_so_far + next_guess
+            if next_guess in secret_word:
+                if blanked(secret_word, guesses_so_far) == secret_word:
+                    feedback = "Congratulations"
+                    game_over = True
+                else:
+                    feedback = "Yes, that letter is in the word"
+            else: # next_guess is not in the word secret_word
+                feedback = "Sorry, " + next_guess + " is not in the word."
+                health = health - 1
+                if health <= 0:
+                    feedback = " Waah, waah, waah. Game over."
+                    game_over = True
+
+    print(feedback)
+    print("The word was..." + secret_word)
+
+import sys # don't worry about this line... for now
+sys.setExecutionLimit(60000)     # let the game take up to a minute, 60 * 1000 milliseconds -- only necessary in-textbook
+main() # invoke the main() game function
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Activities: Week 4' data-toggle="tooltip">
+    <a href="week04.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="week04.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Activities: Week 6 (through fall break)' data-toggle="tooltip" >
+    <a href="week06.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="week06.html" >Next Section - Activities: Week 6 (through fall break)</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

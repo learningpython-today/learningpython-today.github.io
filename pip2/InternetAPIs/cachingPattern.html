@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Caching Response Content &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Caching Response Content</a></li>
+<li><a class="reference internal" href="#a-pattern-for-caching">A Pattern for Caching</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="caching-response-content">
+<span id="more-caching-responses"></span><h1>Caching Response Content<a class="headerlink" href="#caching-response-content" title="Permalink to this headline">¶</a></h1>
+<p>You haven’t experienced it yet, but if you get complicated data back from a REST API, it may take you many tries to compose and debug code that <em>processes</em> that data in the way that you want. (See the <a class="reference internal" href="../NestedData/ListswithComplexItems.html#nested-chap"><span class="std std-ref">Nested Data chapter</span></a>.) It is a good practice, for many reasons, not to keep contacting a REST API to re-request the same data every time you run your program.</p>
+<p>To avoid re-requesting the same data, we will use a programming pattern known as <strong>caching</strong>. It works like this:</p>
+<ol class="arabic simple">
+<li>Before doing some expensive operation (like calling <code class="docutils literal notranslate"><span class="pre">requests.get</span></code> to get data from a REST API), check whether you have already saved (“cached”) the results that would be generated by making that request.</li>
+<li>If so, return that same data</li>
+<li>If not, perform the expensive operation and save (“cache”) the results (e.g. the complicated data) in your cache file so you won’t have to perform it again the next time.</li>
+</ol>
+<p>There are three reasons why caching is a good idea during your
+software development using REST APIs:</p>
+<ul class="simple">
+<li>It reduces load on the website that is providing you data. It is always nice to be courteous when using other people’s resources. Moreover, some websites impose rate limits: for example, after 15 requests in a 15 minute period, the site may start sending error responses. That will be confusing and annoying for you.</li>
+<li>It will make your program run faster. Connections over the Internet can take a few seconds, or even tens of seconds, if you are requesting a lot of data. It might not seem like much, but debugging is a lot easier when you can make a change in your program, run it, and get an almost instant response.</li>
+<li>It is harder to debug the code that processes complicated data if the content that is coming back can change on each run of your code. It’s amazing to be able to write programs that fetch real-time data like available iTunes podcasts or the latest tweets from Twitter. But it can be hard to debug that code if you are having problems that only occur on certain Tweets (e.g. those in foreign languages). When you encounter problematic data, it’s helpful if you save a copy and can debug your program working on that saved, static copy of the data.</li>
+</ul>
+<p>There are some downsides to caching data – for example, if you always want to find out when data has changed, and your default is to rely on already-cached data, then you have a problem. However, when you’re working on developing code that will work, caching is worth the tradeoff.</p>
+<p>In this book, we are providing a pattern we’re calling the “caching pattern” in order to perform this caching operation.</p>
+<p>This is not the only way to perform caching in a program. (In fact, if you go on to learn about web development, you’ll find that you encounter caching all the time – if you’ve ever had the experience of seeing old data when you go to a website and thinking, “Huh, that’s weird, it should really be different now… why am I still seeing that?” that happens because your web browser is performing a kind of caching operation on data from the internet.)</p>
+<p>However, in this book, we’ll treat this as the default caching pattern for now.</p>
+<p>We will use a python dictionary to store the results of expensive operations (the calls to <code class="docutils literal notranslate"><span class="pre">requests.get()</span></code>).</p>
+<p>Each invocation of <code class="docutils literal notranslate"><span class="pre">requests.get</span></code> might have a different URL. Each different URL represents the data that is being requested. For example, you might have a URL that points to data about “all the words that rhyme with the word rain” or “all the words that rhyme with the word orange”. You might have a URL that points to “20 photos tagged with the word ‘river’”, another that points to “50 photos tagged with the word ‘river’”, and yet another that points to “20 photos tagged with the words ‘river’ and ‘mountains’”. Etc.</p>
+<p>When you cache data, you want to check whether you have already gotten data that corresponds to the request you’re making. If so, just use that data for processing in your program. If not, go make the request, retrieve data for it, and cache it – save it, so the next time you make exactly the same request, you’ll already have data, and won’t have to make another expensive operation happen (e.g. going to make a request to the internet). Making a request to a REST API on the internet is more “expensive” – takes more time – than getting data out of a file that’s on your computer.</p>
+</div>
+<div class="section" id="a-pattern-for-caching">
+<h1>A Pattern for Caching<a class="headerlink" href="#a-pattern-for-caching" title="Permalink to this headline">¶</a></h1>
+<p>Your goal as you look at this code should be to try to understand its structure, and understand how you could write similar code that requests and caches data from a different API, and/or how you could add a function that accesses data from another API to the same program.</p>
+<p>When you begin writing a program that will use caching for expensive operations that get data, the first thing you need to do, if you follow the pattern we’re using in this book, is set up your cache.</p>
+<p>You’ll need to:</p>
+<ul class="simple">
+<li>Decide what the file that holds your cached data will be called, and save that in a variable. That variable will be a <em>global</em> variable for the whole file. (We use <code class="docutils literal notranslate"><span class="pre">CACHE_FNAME</span></code>.)</li>
+<li>Try to open a file saved as that name.</li>
+<li>Try to read the contents of that file into a string.</li>
+<li>Try to load the data in the contents of that file into a Python object, and save that data in a variable (we use <code class="docutils literal notranslate"><span class="pre">CACHE_DICTION</span></code>), which will be global for the entire program, so that you can access the cached data anytime later.</li>
+<li>If any one of those things doesn’t work, create a variable (again, <code class="docutils literal notranslate"><span class="pre">CACHE_DICTION</span></code>) to hold the data you’ll be caching during the program.</li>
+</ul>
+<p>During the program, you’ll add key-value pairs to it… and each time, you’ll dump the dictionary to a JSON-formatted string and save that string to a file with the <code class="docutils literal notranslate"><span class="pre">CACHE_FNAME</span></code> name.</p>
+<p>This code does that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CACHE_FNAME</span> <span class="o">=</span> <span class="s1">&#39;cache_file_name.json&#39;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">cache_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">CACHE_FNAME</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">cache_contents</span> <span class="o">=</span> <span class="n">cache_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">cache_diction</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">cache_contents</span><span class="p">)</span>
+    <span class="n">cache_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">cache_diction</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The reason you see the variable CACHE_FNAME in all caps is because it’s convention to use all caps for variable names that are intended to be constants – variables whose values will not change throughout the program, and will only be referred to.</p>
+<p class="last">Paying attention to stylistic conventions in programming like this is helpful, not because it necessarily changes how the code works, but because it will make it easier for other programmers to read your code. And knowing these conventions will make it much easier for you to understand others’ code!</p>
+</div>
+<p>It’s important to understand your end goal with this pattern of caching responses.</p>
+<p>A cache file made with a program like this will eventually contain a JSON-formatted string which represents data from a big, complicated Python dictionary. This dictionary’s keys will be strings, each of which represent a request. For example, a string that represents “a request for data about 50 photos tagged with the word ‘mountains’”. The value corresponding to that key will be a dictionary or list that comes from making specifically that request (e.g. a request for data about 50 photos on Flickr tagged with the word ‘mountains’).</p>
+<p>The code that you saw earlier makes that happen.</p>
+<p>The next thing you need in order to create a process where such a file can be created is a function that will reliably create a string that is that unique identifier of a particular request to a REST API.</p>
+<p>This function should accept two required arguments: the base url for a REST API, the dictionary of query parameters and their values that you would pass to <code class="docutils literal notranslate"><span class="pre">requests.get</span></code>, and a third optional argument: list of any query parameters needed for the request that contain private information you would not want to share, even if you shared your data (e.g. the <code class="docutils literal notranslate"><span class="pre">api_key</span></code> for a request to Flickr).</p>
+<p>The function should return a string that represents a <strong>unique identifier</strong> of a specific API request, which, given the same input to the function, will <em>always</em> be the same.</p>
+<p>We’ve provided such a function you can use, called <code class="docutils literal notranslate"><span class="pre">params_unique_combination</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">params_unique_combination</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span> <span class="n">params_d</span><span class="p">,</span> <span class="n">private_keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;api_key&quot;</span><span class="p">]):</span>
+    <span class="n">alphabetized_keys</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">params_d</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">alphabetized_keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">private_keys</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;{}-{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">params_d</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">baseurl</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example, with this base url: <code class="docutils literal notranslate"><span class="pre">https://api.datamuse.com/words</span></code>
+And this parameters dictionary: <code class="docutils literal notranslate"><span class="pre">{&quot;rel_rhy&quot;:&quot;rain&quot;}</span></code>, an invocation of <code class="docutils literal notranslate"><span class="pre">params_unique_combination</span></code> like so: <code class="docutils literal notranslate"><span class="pre">params_unique_combination(&quot;https://api.datamuse.com/words&quot;,{&quot;rel_rhy&quot;:&quot;rain&quot;})</span></code> would return a string that looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://api.datamuse.com/wordsrel_rhy-rain</span></code></p>
+<p>That’s pretty simple, because there’s only one query parameter and its associated value. But this is pretty useful when you have a complicated set of query parameters and values. (Check out the section of the book about searching for tags on Flickr!)</p>
+<p>When you use some more complicated processes for requesting data from APIs, there are some additional layers of complication in order to cache data, but for what we’ve seen so far, this pattern and this helper function <code class="docutils literal notranslate"><span class="pre">params_unique_combination</span></code> will always work if you’re careful.</p>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="restapis_caching_1">
+            sc-1-1: Why is it important to use a function like the params_unique_combination function in this caching pattern?
+            <li data-component="answer" data-correct id="restapis_caching_1_opt_a">Because when requests.get encodes URL parameters, the params might be in any order, which would make it hard to compare one URL to another later on, and you could cache the same data multiple times.</li><li data-component="feedback" id="restapis_caching_1_opt_a">Comparing the strings "rowling&harry+potter" and "harry+potter&rowling", they are different as far as Python is concerned, but they are the same as far as meaning to a REST API is concerned! That's why we need to manipulate these strings carefully for the cache dictionary.</li>
+            
+            <li data-component="answer"  id="restapis_caching_1_opt_b">Because otherwise, it's too much data in the same function, and the program will not run.</li><li data-component="feedback" id="restapis_caching_1_opt_b">There's no such thing as too much in a function to run, even though sometimes it's a good idea to break functionality up into multiple functions for clarity and ease.</li>
+            
+            <li data-component="answer"  id="restapis_caching_1_opt_c">You don't, actually. This function is just a fancy way of calling requests.get.</li><li data-component="feedback" id="restapis_caching_1_opt_c">This function has nothing to do with calling requests.get. It only formulates information into a unique string.</li>
+            
+            <li data-component="answer"  id="restapis_caching_1_opt_d">Because the params_unique_combination function as written here is what saves the cache data file so you have it later!</li><li data-component="feedback" id="restapis_caching_1_opt_d">This function does not save a cache file at all. It only formulates information into a unique string.</li>
+            
+
+            </ul>
+            </div>
+            <p>Finally, you’ll need to write the function to request and cache data from an API. Here, we’ll write a function requesting data from the datamuse API about words that rhyme with a certain word.</p>
+<p>You’ll need to:</p>
+<ul class="simple">
+<li>As always, set up your function input, base url, and paramaters dictionary in the function body, like you did in functions before.</li>
+<li>Check if the unique identifier created using the <code class="docutils literal notranslate"><span class="pre">params_unique_combination</span></code> function is in the cache dictionary already.</li>
+<li>Then, if it is, great – you don’t even need to make a request. Grab the data in the cache corresponding to that unique request, and return it (or manipulate it in some way to return what you want)</li>
+</ul>
+<p>Otherwise, if the unique identifier is <em>not</em> in the cache dictionary yet, that’s fine.</p>
+<ul class="simple">
+<li>Make a request to the internet, using the base url and the params dictionary with <code class="docutils literal notranslate"><span class="pre">requests.get</span></code>, and get a resopnse back. P</li>
+<li>Pull the text data out of that response, and load it into a Python object.</li>
+<li>Add a key-value pair to the <code class="docutils literal notranslate"><span class="pre">CACHE_DICTION</span></code> cache dictionary, where the key is the unique identifier string representing the request, and the value is that Python object that represents the data you got back from the request.</li>
+<li>Dump the <em>whole</em> <code class="docutils literal notranslate"><span class="pre">CACHE_DICTION</span></code> cache dictionary to a string.</li>
+<li>Open the <code class="docutils literal notranslate"><span class="pre">CACHE_FNAME</span></code> file for <em>writing</em> and write the string version of the cache dictionary to that file. Then, close the file.</li>
+<li>Return the data (or manipulate it in some way to return what you want)</li>
+</ul>
+<p>Here’s an example of such a function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_from_datamuse_caching</span><span class="p">(</span><span class="n">rhymes_with</span><span class="p">):</span>
+    <span class="n">baseurl</span> <span class="o">=</span> <span class="s2">&quot;https://api.datamuse.com/words&quot;</span>
+    <span class="n">params_diction</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">params_diction</span><span class="p">[</span><span class="s2">&quot;rel_rhy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rhymes_with</span>
+    <span class="n">unique_ident</span> <span class="o">=</span> <span class="n">params_unique_combination</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="n">params_diction</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">unique_ident</span> <span class="ow">in</span> <span class="n">CACHE_DICTION</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">CACHE_DICTION</span><span class="p">[</span><span class="n">unique_ident</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span> <span class="n">params_diction</span><span class="p">)</span>
+        <span class="n">CACHE_DICTION</span><span class="p">[</span><span class="n">unique_ident</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">dumped_json_cache</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">CACHE_DICTION</span><span class="p">)</span>
+        <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">CACHE_FNAME</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">dumped_json_cache</span><span class="p">)</span>
+        <span class="n">fw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># Close the open file</span>
+        <span class="k">return</span> <span class="n">CACHE_DICTION</span><span class="p">[</span><span class="n">unique_ident</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The same way you can write a function to get data from many REST APIs using the function structure you’ve seen before, you can write functions to get and cache data by following this pattern.</p>
+<p>This gives you a lot of power, and allows you to use and process a lot of data, repeatedly, that you get from REST APIs – but you don’t have to worry about e.g. not having an internet connection, the data changing in some surprising way midway through your work, or running into “rate limits” for the REST API (restrictions for how many times you can make requests to an API on the same internet connection).</p>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

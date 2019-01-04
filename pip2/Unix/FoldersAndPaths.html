@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Directories and Paths &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Unix for utility" href="DirectoriesAndCopying.html" />
+    <link rel="prev" title="What is the Command Prompt?" href="CommandPrompt.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Directories and Paths</a></li>
+<li><a class="reference internal" href="#unix-commands-cd-ls-and-pwd">Unix Commands: cd, ls, and pwd</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - What is the Command Prompt?" data-toggle="tooltip">
+    <a href="CommandPrompt.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Unix for utility' data-toggle="tooltip" >
+    <a href="DirectoriesAndCopying.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="directories-and-paths">
+<h1>Directories and Paths<a class="headerlink" href="#directories-and-paths" title="Permalink to this headline">¶</a></h1>
+<p>When you navigate through the files on your computer, you probably click on folder icons. You can save files in folders, also known as <strong>directories</strong>, and you can create directories within other directories.</p>
+<p>Navigating through the Unix file system means you are going from one directory to another in the command line interface on your computer (in this class, probably using the application <strong>Terminal</strong>, if you use a Mac, or <strong>Git Bash</strong>, if you use Windows).</p>
+<p>Directories map to <strong>paths</strong>. A path is text that describes exactly what location something is in your file system on your computer. For example, if my computer account is called <code class="docutils literal notranslate"><span class="pre">Jackies-Laptop</span></code>, the path to my <strong>Desktop</strong> directory is <code class="docutils literal notranslate"><span class="pre">Users/Jackies-Laptop/Desktop</span></code>. (The Desktop folder is just a directory like any other on your computer. The operating system displays all the contents of that particular directory on your home screen background.)</p>
+<p>When you are in a command prompt window, you are always connected to some particular directory. When you open the window, you start out at your home directory. You can see where you are by looking at the string in the prompt. For example, this is what it looks like in a Desktop directory:</p>
+<img alt="../_images/promptstring.JPG" src="../_images/promptstring.JPG" />
+<p>The stuff before the $ indicates that you are connected to the ~/Desktop directory. After the $ is a blinking cursor, indicating that you are free to type in a new command there.</p>
+</div>
+<div class="section" id="unix-commands-cd-ls-and-pwd">
+<h1>Unix Commands: cd, ls, and pwd<a class="headerlink" href="#unix-commands-cd-ls-and-pwd" title="Permalink to this headline">¶</a></h1>
+<p>From there, you can use commands to move to other directories. The <code class="docutils literal notranslate"><span class="pre">cd</span></code> command stands for “change directory.” After the letters cd and a space, you will type a path string that specifies the directory to connect to.</p>
+<p>Starting a path with <code class="docutils literal notranslate"><span class="pre">/</span></code> means you’re providing a <strong>full path</strong>. For example, if you have a path such as <code class="docutils literal notranslate"><span class="pre">/Users/kniznica/Desktop</span></code>, you can type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/Users/kniznica/Desktop</span></code> to connect to that directory.</p>
+<p>The symbol <code class="docutils literal notranslate"><span class="pre">~</span></code> refers to your <strong>home directory</strong>. For example, if your username that you use to logon to the computer is kniznica, your home direcdtory might be <code class="docutils literal notranslate"><span class="pre">/Users/kniznica</span></code>. To connect to your home directory, you would type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>, or spell it out as <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Users/kniznica</span></code>. The advantage of <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>, beyond being shorter, is that you don’t have to remember the full path name of your home directory.</p>
+<p>You can also use ~ as a prefix in a longer pathname. Usually, your Desktop folder will be a subdirectory of your home directory. Thus, you could type, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/Desktop</span></code>.</p>
+<p>If the path you specify does not begin with either ~ or /, then it is a <strong>relative path</strong>, relative to where you are right now. It specifies a subdirectory of the current directory. Thus, for example, suppose your home directory contains a <code class="docutils literal notranslate"><span class="pre">Documents</span></code> subdirectory, which contains a directory called <code class="docutils literal notranslate"><span class="pre">106</span></code>. Suppose you are currently connected to the home directory (cd ~). Then you could type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents</span></code> to connect to the Document directory, or <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents/106</span></code> to connect to the 106 directory. Alternatively, starting from your home directory, you could go in two steps, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents</span></code>, then <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">106</span></code>. In my case, I have one more layer of directories in the hierarchy: with 106 being a subdirectory of Courses, which is a subdirectory of Documents, as shown in the Figure below.</p>
+<img alt="../_images/cd_1.JPG" src="../_images/cd_1.JPG" />
+<p>Now, if you are connected to this <code class="docutils literal notranslate"><span class="pre">106</span></code> directory, and all it has in it is document files of notes you take in class and screenshot images, you cannot do <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents</span></code> – you can try, but it will not work. Once you are <strong>in</strong> <code class="docutils literal notranslate"><span class="pre">106</span></code>, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents</span></code> is trying to find a subdirectory of 106 named Documents, which doesn’t exist.</p>
+<p>If you want to go back up one level in the file structure, from a subdirectory to the containing directory, there is a syntax especially for that: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>. So if you are at <code class="docutils literal notranslate"><span class="pre">~/Documents/106</span></code> and now you want to go back to the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> directory in your command prompt, you would type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> at the prompt. If you wanted to go up two levels, back to your home directory, you would type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../..</span></code>. Of course, if the final destination is your home directory, you could just type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>.</p>
+<p>Once you’ve reached a directory, there are a lot of powerful unix commands you can use that act on the contents of the current directory. The next one we’ll discuss is <code class="docutils literal notranslate"><span class="pre">ls</span></code>, which is a command that lists all files that are in your current folder. (The directory, or folder, that you’re <strong>currently in</strong> in the command prompt is often referred to as your <strong>working directory</strong>.)</p>
+<p><code class="docutils literal notranslate"><span class="pre">ls</span></code> is a way to list a directory’s contents. For example, now that we have gone to a folder, <code class="docutils literal notranslate"><span class="pre">ls</span></code> will display a list like this:</p>
+<img alt="../_images/lsexample.JPG" src="../_images/lsexample.JPG" />
+<p>Here’s the view of the same directory in Windows Explorer:</p>
+<img alt="../_images/lsInWindowsExplorer.JPG" src="../_images/lsInWindowsExplorer.JPG" />
+<p>Of course, the visual display is easier for people to read. But later in the course you will need to navigate through your directories using the command prompt, and it will be helpful for you to see contents of directories in the command prompt as well.</p>
+<p>You can provide a path string after the ls command. That will show the contents of the specified directory, <em>without changing the directory that you’re currently connected to</em>. For example, <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">~/Desktop</span></code> will show the contents of the Desktop directory, without connecting to it.</p>
+<p>Another useful command is <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, which comes from the words <em>print working directory</em>. If you type <code class="docutils literal notranslate"><span class="pre">pwd</span></code> at the command prompt, you will see the full path of the location you have navigated to in the command prompt. For example,</p>
+<img alt="../_images/pwdinMac.png" src="../_images/pwdinMac.png" />
+<p>This is useful for several reasons, including checking where you’ve navigated to when you were <code class="docutils literal notranslate"><span class="pre">cd</span></code>-ing to different locations; perhaps you want to ensure that you are where you think you are. (And then, you can use <code class="docutils literal notranslate"><span class="pre">ls</span></code> to see whether the files and directories you believe are in that place are really there.) It’s a helpful visual check – you might know from the command prompt that you are in a folder called <code class="docutils literal notranslate"><span class="pre">106</span></code>, but what if you have one folder called <code class="docutils literal notranslate"><span class="pre">106</span></code> at <code class="docutils literal notranslate"><span class="pre">~/Desktop/106</span></code> and one at <code class="docutils literal notranslate"><span class="pre">~/Desktop/Classes/106</span></code>? It can mess you up to forget which one you’re using at a given time. (Of course, it’s a good idea not to repeat folder names, but <code class="docutils literal notranslate"><span class="pre">pwd</span></code> is a useful tool to check on your mistakes.)</p>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="test_question_unix_ls_1">
+            rec-5-1: Which of the following commands specify absolute paths?
+            <li data-component="answer" data-correct id="test_question_unix_ls_1_opt_a">cd /c/Users/presnick/Documents</li><li data-component="feedback" id="test_question_unix_ls_1_opt_a">It starts with a /.</li>
+            
+            <li data-component="answer"  id="test_question_unix_ls_1_opt_b">cd presnick/Documents</li><li data-component="feedback" id="test_question_unix_ls_1_opt_b">This specifies the presnick subdirectory of the current directory and the Documents subdirectory of that.</li>
+            
+            <li data-component="answer"  id="test_question_unix_ls_1_opt_c">cd Documents</li><li data-component="feedback" id="test_question_unix_ls_1_opt_c">This specifies the Document subdirectory of the current directory.</li>
+            
+            <li data-component="answer" data-correct id="test_question_unix_ls_1_opt_d">cd ~</li><li data-component="feedback" id="test_question_unix_ls_1_opt_d">This specifies the home directory.</li>
+            
+            <li data-component="answer" data-correct id="test_question_unix_ls_1_opt_e">cd ~/Documents</li><li data-component="feedback" id="test_question_unix_ls_1_opt_e">This specifies the Documents subdirectory of the home directory.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="test_question_unix_ls_2">
+            rec-5-2: Which of the following commands specify relative paths?
+            <li data-component="answer"  id="test_question_unix_ls_2_opt_a">cd /c/Users/presnick/Documents</li><li data-component="feedback" id="test_question_unix_ls_2_opt_a">It starts with a /.</li>
+            
+            <li data-component="answer" data-correct id="test_question_unix_ls_2_opt_b">cd presnick/Documents</li><li data-component="feedback" id="test_question_unix_ls_2_opt_b">This specifies the presnick subdirectory of the current directory and the Documents subdirectory of that.</li>
+            
+            <li data-component="answer" data-correct id="test_question_unix_ls_2_opt_c">cd Documents</li><li data-component="feedback" id="test_question_unix_ls_2_opt_c">This specifies the Document subdirectory of the current directory.</li>
+            
+            <li data-component="answer"  id="test_question_unix_ls_2_opt_d">cd ~</li><li data-component="feedback" id="test_question_unix_ls_2_opt_d">This specifies the full path of the home directory.</li>
+            
+            <li data-component="answer"  id="test_question_unix_ls_2_opt_e">cd ~/Documents</li><li data-component="feedback" id="test_question_unix_ls_2_opt_e">This specifies the full path of the Documents subdirectory of the home directory.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - What is the Command Prompt?' data-toggle="tooltip">
+    <a href="CommandPrompt.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="CommandPrompt.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Unix for utility' data-toggle="tooltip" >
+    <a href="DirectoriesAndCopying.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="DirectoriesAndCopying.html" >Next Section - Unix for utility</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

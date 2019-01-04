@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Training a Classifier/Predictor &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Evaluating a Classifier/Predictor" href="evaluation.html" />
+    <link rel="prev" title="The Shannon Game: Guessing the Next Letter in a Text" href="shannon_guesser.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Training a Classifier/Predictor</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - The Shannon Game: Guessing the Next Letter in a Text" data-toggle="tooltip">
+    <a href="shannon_guesser.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Evaluating a Classifier/Predictor' data-toggle="tooltip" >
+    <a href="evaluation.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="training-a-classifier-predictor">
+<h1>Training a Classifier/Predictor<a class="headerlink" href="#training-a-classifier-predictor" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">Rather than hand-coding the rules that are used in a rule-based classifier or predictor, we can use data.</p>
+<p>For example, for the gender classifier described in a previous section, instead of hard-coding the rules, you could try to learn them. Suppose that you were given long lists of male and female names, like the ones below, but with many more examples.</p>
+
+<div data-childcomponent="prediction_8" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_8 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+males = ['Barde', 'Ali', 'Marcio', 'Tyrone', 'Gabriel', 'Gerrard', 'Lawrence', 'Knox', 'Kurtis', 'Adrian', 'Arlo', 'Wilburt', 'Barney', 'Thadeus', 'Kalil', 'Zacharia', 'Ruben', 'Yigal', 'Paddie', 'Francis', 'Eliot', 'Bud', 'Zebulen', 'Hartwell', 'Daniel', 'Gerold', 'Reynold', 'Solomon', 'Kingsly', 'Haydon', 'Edgardo', 'Ford', 'Gregorio', 'Cory', 'Drew', 'Rodrique', 'Flin', 'Ginger', 'Bard', 'Wye', 'Yacov', 'Theo', 'Lindsey', 'Penn', 'Raleigh', 'Phineas', 'Ulric', 'Dion', 'Zary', 'Ricardo']
+
+females = ['Erinna', 'Orelee', 'Melisandra', 'Dorotea', 'Alvinia', 'Leena', 'Milli', 'Beckie', 'Sascha', 'Cortney', 'Cheri', 'Shanda', 'Catrina', 'Anestassia', 'Cher', 'Randy', 'Charline', 'Brigit', 'Rafaelia', 'Shelagh', 'Cherish', 'Zorana', 'Shay', 'Beatrice', 'Jeannette', 'Briana', 'Lynne', 'Kattie', 'Tobye', 'Marietta', 'Vilma', 'Meggi', 'Ondrea', 'Idell', 'Yoshi', 'Fanechka', 'Andria', 'Denys', 'Darb', 'Roby', 'Philippa', 'Alecia', 'Lanni', 'Hatti', 'Simonette', 'Celeste', 'Inesita', 'Else', 'Hulda', 'Lela']
+</textarea>
+</div>
+<p>In machine learning, we refer to a set of labeled examples like this as <em>training data</em>. You could then consider various features, such as last letters or first letters, or the presence of certain letter combinations. For each of those features, you could count up how many of the male and female names in the training set match the feature (e.g., have the last letter ‘i’). If the feature is much more common in examples labeled as female than male, then you could add a new rule to the rule set, outputting “female” when the feature is present.</p>
+<p>Let’s use training data to create rules for a rule-based predictor for the Shannon Game. The interesting twist will be that the training data will consist not only of some publicly available English texts, but also the sequence of letters that have already been revealed from the current text. The features will be the most recent letter or letters that have been revealed. Thus, for example, using publicly available English texts, you might learn a rule that following a ‘q’ the next letter is almost always ‘u’. Using the previously revealed letters from the current text, you might learn that if the most recent letters are “Mr. “, then the next letter is likely to be “C”.</p>
+<p>First, let’s make a base rule to fall back on that guesses all the letters in the alphabet but rather than guessing them in alphabetic order, guesses them in order of how frequently they appear in our training data of English text.</p>
+<p>Suppose that we have an English corpus stored in the string train_txt. We first count how frequent all the letters are, accumulating results in a dictionary. We then sort the letters by their frequency, using the pattern in <a class="reference internal" href="../Sort/SortingaDictionary.html#sort-dictionaries"><span class="std std-ref">Sorting Dictionaries</span></a>.</p>
+
+<div data-childcomponent="prediction_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_9 data-lang="python" 
+     data-include="prediction_training_helpers" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+# produce a dictionary with letters and counts
+def letter_frequencies(txt):
+    d = {}
+    for c in txt:
+        if c not in d:
+            d[c] = 1
+        else:
+            d[c] = d[c] + 1
+    return d
+
+fs = letter_frequencies(train_txt)
+
+
+# sort the letters by how frquently they appear
+sorted_lets = sorted(fs.keys(), key = lambda c: fs[c], reverse=True)
+
+# Define a default rule
+freqs_rule = (None, sorted_lets)
+</textarea>
+</div>
+<p>How much better do we do at guessing the next letter, just by guessing letters in order of their frequency in the training text?</p>
+
+<div data-childcomponent="prediction_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_10 data-lang="python" 
+     data-include="prediction_training_helpers" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+import sys
+sys.setExecutionLimit(60000)     # let it take up to a minute, 60 * 1000 milliseconds
+
+performance(test_txt, [(None, alphabet)])
+performance(test_txt, [(None, sorted_lets), (None, alphabet)])
+</textarea>
+</div>
+<p>Now, suppose that we try to learn some context-sensitive rules, like guessing ‘U’ after a ‘Q’?</p>
+<p>Let’s create a nested dictionary to store the frequency of letters that follow each letter in the alphabet, using the input training text. The structure of the dictionary we will create looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:{</span><span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:{</span><span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>This would reflect training data where B came after A 2 times in the training text, and C came after A 4 times in the data, E came after D 6 times, and so on.</p>
+
+<div data-childcomponent="prediction_11" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_11 data-lang="python" 
+     data-include="prediction_training_helpers" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+def next_letter_frequencies(txt):
+    # txt is a big text string
+    r = {} # initialize the accumulator, an empty ditionary
+    for i in range(len(txt)-1):
+        # loop through the positions (indexes) of txt;
+        # each iteration, we'll be looking at the
+        # letter txt[i] and the following letter, txt[i+1]
+        if txt[i] not in r:
+            # first time we've seen the current letter
+            # make an empty dictionary for counts of what letters come next
+            r[txt[i]] = {}
+        next_letter_freqs = r[txt[i]]  # dictionary of counts of what letters come next after txt[i]
+        next_letter = txt[i+1]  # next letter is txt[i+1]
+        if next_letter not in next_letter_freqs:
+            # first time seeing next_letter after txt[i+1]
+            next_letter_freqs[next_letter] = 1
+        else:
+            next_letter_freqs[next_letter] = next_letter_freqs[next_letter] + 1
+    return r
+
+counts = next_letter_frequencies(train_txt)
+print(counts)
+</textarea>
+</div>
+<p>Given that counts dictionary, we can create a different guessing rule for each possible previous letter. The keys of the outer dictionary are possible last letters. The keys in each inner dictionary represent a possible next letter, and the value associated with the key is how frequently that next letter occurred. If we sort the inner dictionary’s keys based on the associated values, we can get a sorted list of next guesses to make.</p>
+
+<div data-childcomponent="prediction_12" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_12 data-lang="python" 
+     data-include="prediction_training_helpers" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+context_sensitive_rules = []
+for c in counts.keys():
+    fs = counts[c]
+    sorted_lets = sorted(fs.keys(), key = lambda c: fs[c], reverse=True)
+    context_sensitive_rules.append((c, sorted_lets))
+# make default rule for letters in test_txt that weren't in train_txt
+context_sensitive_rules.append((None, alphabet))
+
+import sys
+sys.setExecutionLimit(60000)     # let it take up to a minute, 60 * 1000 milliseconds
+
+performance(test_txt, [(None, sorted_lets), (None, alphabet)])
+performance(test_txt, context_sensitive_rules)
+entropy(test_txt, context_sensitive_rules)
+</textarea>
+</div>
+<p>We got another big improvement from that. Our estimated entropy is down to 2.61 bits per character. That’s a big improvement, but still quite a bit higher than Shannon’s estimate of around 1.3, based on people doing the predicting.  We could go even farther with training our predictor, generating additional rules in various ways. For example, with a larger training corpus we could sort our next guesses based on what follows from the previous <em>two</em> characters instead of the last character. Or, once we get to the end of a word, we might estimate frequencies of complete words. Within a word, we might maintain a dictionary of possible completions of the current word. Challenge: see how much additional improvement you can make!</p>
+
+<div data-childcomponent="prediction_training_helpers" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_training_helpers data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZs "
+
+def guesser(prev_txt, rls):
+    all_guesses = []
+    for (suffix, guesses) in rls:
+        if (suffix == None) or ((len(prev_txt) >= len(suffix)) and (prev_txt[-len(suffix):] == suffix)):
+            # append all the guesses that are new
+            for guess in guesses:
+                if guess not in all_guesses:
+                    all_guesses.append(guess)
+    return all_guesses
+
+
+def performance(txt, rls):
+    # txt is a string
+    # rls is a list of tuples; each tuple represents one rule
+    # Run the guesser on txt and print out the overall performance
+
+    tot = 0 # initialize accumulator for total guesses required
+    prev_txt = ""
+    for c in txt:
+        to_try = guesser(prev_txt, rls)
+        # find out position of the next character of txt, in the guesses list to_try
+        # That's how many guesses it would take before you make the right guess
+        guess_count = to_try.index(c)
+        tot += guess_count
+        # c has now been revealed, so add it to prev_txt
+        prev_txt += c
+    # done with the for loop; print the overall performance
+    print("%d characters to guess\t%d guesses\t%.2f guesses per character, on average\n" % (len(txt) -1, tot, float(tot)/(len(txt) -1)))
+
+
+def collapse(txt):
+    # turn newlines and tabs into spaces and collapse multiple spaces to just one
+    # gets rid of anything that's not in our predefined alphabet.
+    txt = txt.upper()
+    txt = txt.replace("\r", " ").replace("\n", " ").replace("\t", " ")
+    res = ""
+    prev = ""
+    for c in txt:
+        if c in alphabet:
+            # if not second space in a row, use it
+            if c != " " or prev != " ":
+                res += c
+            # current character will be prev on the next iteration
+            prev = c
+    return res
+
+
+train_txt = collapse("""
+IN the year 1878 I took my degree of Doctor of Medicine of the
+University of London, and proceeded to Netley to go through the course
+prescribed for surgeons in the army. Having completed my studies there,
+I was duly attached to the Fifth Northumberland Fusiliers as Assistant
+Surgeon. The regiment was stationed in India at the time, and before
+I could join it, the second Afghan war had broken out. On landing at
+Bombay, I learned that my corps had advanced through the passes, and
+was already deep in the enemy's country. I followed, however, with many
+other officers who were in the same situation as myself, and succeeded
+in reaching Candahar in safety, where I found my regiment, and at once
+entered upon my new duties.
+
+The campaign brought honours and promotion to many, but for me it had
+nothing but misfortune and disaster. I was removed from my brigade and
+attached to the Berkshires, with whom I served at the fatal battle of
+Maiwand. There I was struck on the shoulder by a Jezail bullet, which
+shattered the bone and grazed the subclavian artery. I should have
+fallen into the hands of the murderous Ghazis had it not been for the
+devotion and courage shown by Murray, my orderly, who threw me across a
+pack-horse, and succeeded in bringing me safely to the British lines.
+
+Worn with pain, and weak from the prolonged hardships which I had
+undergone, I was removed, with a great train of wounded sufferers, to
+the base hospital at Peshawar. Here I rallied, and had already improved
+so far as to be able to walk about the wards, and even to bask a little
+upon the verandah, when I was struck down by enteric fever, that curse
+of our Indian possessions. For months my life was despaired of, and
+when at last I came to myself and became convalescent, I was so weak and
+emaciated that a medical board determined that not a day should be lost
+in sending me back to England. I was dispatched, accordingly, in the
+troopship "Orontes," and landed a month later on Portsmouth jetty, with
+my health irretrievably ruined, but with permission from a paternal
+government to spend the next nine months in attempting to improve it.
+
+I had neither kith nor kin in England, and was therefore as free as
+air--or as free as an income of eleven shillings and sixpence a day will
+permit a man to be. Under such circumstances, I naturally gravitated to
+London, that great cesspool into which all the loungers and idlers of
+the Empire are irresistibly drained. There I stayed for some time at
+a private hotel in the Strand, leading a comfortless, meaningless
+existence, and spending such money as I had, considerably more freely
+than I ought. So alarming did the state of my finances become, that
+I soon realized that I must either leave the metropolis and rusticate
+somewhere in the country, or that I must make a complete alteration in
+my style of living. Choosing the latter alternative, I began by making
+up my mind to leave the hotel, and to take up my quarters in some less
+pretentious and less expensive domicile.
+
+On the very day that I had come to this conclusion, I was standing at
+the Criterion Bar, when some one tapped me on the shoulder, and turning
+round I recognized young Stamford, who had been a dresser under me at
+Barts. The sight of a friendly face in the great wilderness of London is
+a pleasant thing indeed to a lonely man. In old days Stamford had never
+been a particular crony of mine, but now I hailed him with enthusiasm,
+and he, in his turn, appeared to be delighted to see me. In the
+exuberance of my joy, I asked him to lunch with me at the Holborn, and
+we started off together in a hansom.
+""")
+
+test_txt = collapse("""
+    "Ah," said Holmes, "I think that what you have been good enough
+to tell us makes the matter fairly clear, and that I can deduce
+all that remains. Mr. Rucastle then, I presume, took to this
+system of imprisonment?"
+
+"Yes, sir."
+
+"And brought Miss Hunter down from London in order to get rid of
+the disagreeable persistence of Mr. Fowler."
+
+"That was it, sir."
+
+"But Mr. Fowler being a persevering man, as a good seaman should
+be, blockaded the house, and having met you succeeded by certain
+arguments, metallic or otherwise, in convincing you that your
+interests were the same as his."
+
+"Mr. Fowler was a very kind-spoken, free-handed gentleman," said
+Mrs. Toller serenely.
+
+"And in this way he managed that your good man should have no
+want of drink, and that a ladder should be ready at the moment
+when your master had gone out."
+
+"You have it, sir, just as it happened."
+
+"I am sure we owe you an apology, Mrs. Toller," said Holmes, "for
+you have certainly cleared up everything which puzzled us. And
+here comes the country surgeon and Mrs. Rucastle, so I think,
+Watson, that we had best escort Miss Hunter back to Winchester,
+as it seems to me that our locus standi now is rather a
+questionable one."
+
+And thus was solved the mystery of the sinister house with the
+copper beeches in front of the door. Mr. Rucastle survived, but
+was always a broken man, kept alive solely through the care of
+his devoted wife. They still live with their old servants, who
+probably know so much of Rucastle's past life that he finds it
+difficult to part from them. Mr. Fowler and Miss Rucastle were
+married, by special license, in Southampton the day after their
+flight, and he is now the holder of a government appointment in
+the island of Mauritius. As to Miss Violet Hunter, my friend
+Holmes, rather to my disappointment, manifested no further
+interest in her when once she had ceased to be the centre of one
+of his problems, and she is now the head of a private school at
+Walsall, where I believe that she has met with considerable success.
+""")
+
+# produce a dictionary with letters and counts
+def letter_frequencies(txt):
+    d = {}
+    for c in txt:
+        if c not in d:
+            d[c] = 1
+        else:
+            d[c] = d[c] + 1
+    return d
+
+fs = letter_frequencies(train_txt)
+
+
+# sort the letters by how frquently they appear
+sorted_lets = sorted(fs.keys(), key = lambda c: fs[c], reverse=True)
+
+def next_letter_frequencies(txt):
+    # txt is a big text string
+    r = {} # initialize the accumulator, an empty ditionary
+    for i in range(len(txt)-1):
+        # loop through the positions (indexes) of txt;
+        # each iteration, we'll be looking at the
+        # letter txt[i] and the following letter, txt[i+1]
+        if txt[i] not in r:
+            # first time we've seen the current letter
+            # make an empty dictionary for counts of what letters come next
+            r[txt[i]] = {}
+        next_letter_freqs = r[txt[i]]  # dictionary of counts of what letters come next after txt[i]
+        next_letter = txt[i+1]  # next letter is txt[i+1]
+        if next_letter not in next_letter_freqs:
+            # first time seeing next_letter after txt[i+1]
+            next_letter_freqs[next_letter] = 1
+        else:
+            next_letter_freqs[next_letter] = next_letter_freqs[next_letter] + 1
+    return r
+
+counts = next_letter_frequencies(train_txt)
+
+import math
+def entropy(txt, rls):
+    guess_frequencies = {}
+    prev_txt = ""
+    for c in txt:
+        to_try = guesser(prev_txt, rls)
+        guess_count = to_try.index(c) + 1
+        if guess_count in guess_frequencies:
+            guess_frequencies[guess_count] += 1
+        else:
+            guess_frequencies[guess_count] = 1
+        prev_txt += c
+
+    print("guess_frequencies:", guess_frequencies)
+    # from frequencies, compute entropy
+    acc = 0.0
+    for i in range(len(guess_frequencies.keys())):
+        guess_count = guess_frequencies.keys()[i]
+        probability = guess_frequencies[guess_count] / float(len(txt))
+        if i < len(guess_frequencies.keys()) - 1:
+            next_guess_count = guess_frequencies.keys()[i+1]
+            next_probability = guess_frequencies[next_guess_count] / float(len(txt))
+        else:
+            next_probability = 0
+        acc += guess_count * (probability-next_probability) * math.log(guess_count, 2)
+
+    print("entropy:", acc)
+    return acc
+</textarea>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - The Shannon Game: Guessing the Next Letter in a Text' data-toggle="tooltip">
+    <a href="shannon_guesser.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="shannon_guesser.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Evaluating a Classifier/Predictor' data-toggle="tooltip" >
+    <a href="evaluation.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="evaluation.html" >Next Section - Evaluating a Classifier/Predictor</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

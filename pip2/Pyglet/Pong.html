@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pong &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction: Test Cases" href="../Testing/intro-TestCases.html" />
+    <link rel="prev" title="Scheduling Periodic Actions" href="schedulingEvents.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Pong</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Scheduling Periodic Actions" data-toggle="tooltip">
+    <a href="schedulingEvents.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Introduction: Test Cases' data-toggle="tooltip" >
+    <a href="../Testing/intro-TestCases.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="pong">
+<h1>Pong<a class="headerlink" href="#pong" title="Permalink to this headline">¶</a></h1>
+<p>To illustrate the power of the Pyglet framework and subclassing, we provide a simple implementation of Pong, the original Atari arcade game.</p>
+<p>Two players control the up and down movement of their paddles using the letters W, S, I, and K. The P key pauses or unpauses the game. And Q quits.</p>
+<p>As in the simple game of controlling a white square moving, in the previous section, we define a subclass GameWindow of pyglet.window.Window. It maintains a list of currently pressed keys, which is changed whenever a keypress is initiated or released.</p>
+<p>Here we introduce a new class, Game, to keep track of all the elements of the game, including the ball, paddles, and walls, plus counters for the score, etc. The Ball, Paddles, and Walls, are all instances of the Sprite class (or, rather, of subclasses of that class). Thus, they have x,y positions within the window and know how to redisplay themselves.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">schedule_interval</span></code>, 20 times per second a method is called which advances the state of the game (e.g., moving the ball and paddles by a few pixels).</p>
+<p>We use inheritance to make it simpler to program the ball, paddles, and walls. We define a generic GameObject class. Any instance knows how to move itself by a few pixels, based on a direction (angle) and velocity that are stored as instance variables.</p>
+<p>Ball, BallDeflector, and Endline are three subclasses of GameObject.</p>
+<p>The Ball class, in addition to the movement capability it inherits from GameObject, on each update checks itself against each of the other game objects (the paddles and walls) to see if it is now colliding with that object. If so, it ask that object to handle the collision.</p>
+<p>The Endline class, in addition to what it inherits from GameObject, also handles collision with a ball. Instead of deflecting the ball back, it just resets the game, with the ball restarting in the middle of the window.</p>
+<p>The BallDeflector class, in addition to what it inherits from GameObject, has the ability to deflect a ball, giving it a new direction (angle). The top and bottom walls are BallDeflectors.</p>
+<p>Paddle is a subclass of BallDeflector. In addition to what it inherits from BallDeflector, it sets its direction and velocity based on what keys are currently pressed. For example, if W is pressed for the left paddle, it will set the direction to be straight up; if S is pressed, it sets the direction of movement to be straight down.</p>
+<p>Thus, we can summarize the class/subclass relations of all the classes used:</p>
+<img alt="../_images/ClassHierarchy.png" src="../_images/ClassHierarchy.png" />
+<p>The diagram below shows the structure of the objects that will be created when we run the program. The instance of Game maintains instance variables balls, walls, and paddles that each are lists of object instances, always an instance of the appropriate subclass of GameObject.</p>
+<img alt="../_images/InstanceStructure.png" src="../_images/InstanceStructure.png" />
+<p>We provide the complete code listing below.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Sam Carton and Paul Resnick&#39;</span>
+
+<span class="kn">import</span> <span class="nn">pyglet</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">debug</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">as_cartesian</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span><span class="n">angle</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">angle</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">velocity</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">angle</span><span class="p">)),</span><span class="n">velocity</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">sign</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">class</span> <span class="nc">GameObject</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_file</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">initial_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">initial_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">game</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="n">pyglet</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_file</span><span class="p">,</span> <span class="n">initial_x</span><span class="p">,</span> <span class="n">initial_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game</span> <span class="o">=</span> <span class="n">game</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">initial_x</span> <span class="o">=</span> <span class="n">initial_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initial_y</span> <span class="o">=</span> <span class="n">initial_y</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_initial_position</span><span class="p">()</span>
+
+
+    <span class="k">def</span> <span class="nf">set_initial_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># set_position method is inherited from Sprite class</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">initial_x</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">initial_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Move this game object one unit forward in the direction of its velocity.</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">x_vel</span><span class="p">,</span><span class="n">y_vel</span> <span class="o">=</span> <span class="n">as_cartesian</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_vel</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">y_vel</span><span class="p">))</span>
+
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pressed_keys</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">()</span>
+
+
+
+<span class="k">class</span> <span class="nc">BallDeflector</span><span class="p">(</span><span class="n">GameObject</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">deflect_ball</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">ball</span><span class="p">,</span><span class="n">side_hit</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Deflect a ball that has collided with this object.</span>
+<span class="sd">        :param ball:</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="n">side_hit</span> <span class="o">==</span> <span class="s1">&#39;RIGHT&#39;</span> <span class="ow">or</span> <span class="n">side_hit</span> <span class="o">==</span> <span class="s1">&#39;LEFT&#39;</span><span class="p">:</span>
+            <span class="n">ball</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="mi">180</span><span class="o">-</span><span class="n">ball</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span> <span class="o">%</span> <span class="mi">360</span>
+        <span class="k">elif</span> <span class="n">side_hit</span> <span class="o">==</span> <span class="s1">&#39;BOTTOM&#39;</span> <span class="ow">or</span> <span class="n">side_hit</span> <span class="o">==</span> <span class="s1">&#39;TOP&#39;</span><span class="p">:</span>
+            <span class="n">ball</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span> <span class="n">ball</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span> <span class="o">%</span> <span class="mi">360</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">shunt</span><span class="p">(</span><span class="n">ball</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">shunt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ball</span><span class="p">):</span>
+        <span class="c1"># Shunt the ball in its new direction by enough so that it is no longer overlapping with self.</span>
+        <span class="c1"># This avoids processing multiple collisions of self and ball before the ball &quot;escapes&quot;</span>
+        <span class="k">while</span> <span class="n">ball</span><span class="o">.</span><span class="n">colliding_with</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">ball</span><span class="o">.</span><span class="n">move</span><span class="p">()</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">foobar</span>
+
+<span class="k">class</span> <span class="nc">EndLine</span><span class="p">(</span><span class="n">BallDeflector</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">deflect_ball</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ball</span><span class="p">,</span> <span class="n">side_hit</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hit an endline&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">side_hit</span> <span class="o">==</span> <span class="s1">&#39;LEFT&#39;</span><span class="p">:</span>
+            <span class="c1"># ball approached from the left to right wall</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">side_hit</span> <span class="o">==</span> <span class="s1">&#39;RIGHT&#39;</span><span class="p">:</span>
+            <span class="c1"># ball approached from the right</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Shouldn&#39;t happen. Must have miscalculated which side was hit, since this is an endline</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">side_hit</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Ball</span><span class="p">(</span><span class="n">GameObject</span><span class="p">):</span>
+
+    <span class="n">default_velocity</span> <span class="o">=</span> <span class="mf">6.0</span> <span class="c1">#Number of pixels the ball should move per game cycle</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pressed_keys</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_play</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">game_object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">game_objects</span><span class="p">:</span>
+                <span class="n">side_hit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">colliding_with</span><span class="p">(</span><span class="n">game_object</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">side_hit</span><span class="p">:</span>
+                    <span class="n">game_object</span><span class="o">.</span><span class="n">deflect_ball</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">side_hit</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_initial_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">initial_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_velocity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_random_starting_angle</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_play</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">generate_random_starting_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Generate a random angle that isn&#39;t too close to straight up and down or straight side to side</span>
+<span class="sd">        :return: an angle in degrees</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">75</span><span class="p">)</span><span class="o">+</span><span class="mi">90</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Starting ball angle: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; degrees&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">angle</span>
+
+    <span class="k">def</span> <span class="nf">colliding_with</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">game_object</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        self is a ball and game_object is some other game_object.</span>
+<span class="sd">        If their bounding boxes (the space they take up on screen) don&#39;t overlap,</span>
+<span class="sd">        return False.</span>
+<span class="sd">        If they do overlap, return one of &#39;LEFT&#39;, &#39;RIGHT&#39;, &#39;TOP&#39;, &#39;BOTTOM&#39;,</span>
+<span class="sd">        indicating which edge of game_object the ball has hit.</span>
+
+<span class="sd">        Note: this code is complicated, in part because of the geometric reasoning.</span>
+<span class="sd">        You don&#39;t have to understand how this method is implemented, but you will</span>
+<span class="sd">        need to understand what it does-- figure out which side of the game_object, if any,</span>
+<span class="sd">        the ball collided with first.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="c1"># x_distance is difference between rightmost object&#39;s left-side (x) and the other&#39;s right side (x+width)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">game_object</span><span class="o">.</span><span class="n">x</span><span class="p">):</span>
+            <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="p">,</span> <span class="n">game_object</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">game_object</span><span class="p">,</span> <span class="bp">self</span>
+        <span class="n">x_distance</span> <span class="o">=</span> <span class="n">right</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">left</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+        <span class="c1"># y_distance is difference between one object&#39;s bottom-side (y) and the other&#39;s top side (y + height)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">game_object</span><span class="o">.</span><span class="n">y</span><span class="p">):</span>
+            <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="bp">self</span><span class="p">,</span> <span class="n">game_object</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">game_object</span><span class="p">,</span> <span class="bp">self</span>
+        <span class="n">y_distance</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">bottom</span><span class="o">.</span><span class="n">y</span><span class="o">+</span> <span class="n">bottom</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">x_distance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">y_distance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+             <span class="c1"># no overlap</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># figure out which side of game_object self hit</span>
+            <span class="c1"># first, special cases of horizontal or vertical approach angle</span>
+            <span class="n">special_cases</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;LEFT&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">:</span> <span class="s1">&#39;BOTTOM&#39;</span><span class="p">,</span> <span class="mi">180</span><span class="p">:</span> <span class="s1">&#39;RIGHT&#39;</span><span class="p">,</span> <span class="mi">270</span><span class="p">:</span> <span class="s1">&#39;TOP&#39;</span><span class="p">}</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="ow">in</span> <span class="n">special_cases</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">special_cases</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Decide base on self&#39;s y position at the point where they intersected in the x-dimension</span>
+                <span class="p">(</span><span class="n">x_vel</span><span class="p">,</span> <span class="n">y_vel</span><span class="p">)</span> <span class="o">=</span> <span class="n">as_cartesian</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
+                <span class="n">slope</span> <span class="o">=</span> <span class="n">y_vel</span> <span class="o">/</span> <span class="n">x_vel</span>
+                <span class="c1"># go x_distance units either forward or back in x dimension; multiply by slope to get offset in y dimension</span>
+                <span class="n">y_at_x_collision</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">sign</span><span class="p">(</span><span class="n">y_vel</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">x_distance</span> <span class="o">*</span> <span class="n">slope</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">):</span>
+                    <span class="c1"># coming from below left, check if top of self was below game_object</span>
+                    <span class="k">if</span> <span class="n">y_at_x_collision</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">&lt;</span> <span class="n">game_object</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;BOTTOM&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;LEFT&#39;</span>
+                <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">180</span><span class="p">):</span>
+                    <span class="c1"># coming from below right, check if top of self was below game_object</span>
+                    <span class="k">if</span> <span class="n">y_at_x_collision</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">&lt;</span> <span class="n">game_object</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;BOTTOM&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;RIGHT&#39;</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">270</span><span class="p">:</span>
+                    <span class="c1"># coming from above right, check if bottom of self was above game_object</span>
+                    <span class="k">if</span> <span class="n">y_at_x_collision</span> <span class="o">&gt;</span> <span class="n">game_object</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">game_object</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;TOP&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;RIGHT&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># coming from above right, check if bottom of self was above game_object</span>
+                    <span class="k">if</span> <span class="n">y_at_x_collision</span> <span class="o">&gt;</span> <span class="n">game_object</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">game_object</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;TOP&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="s1">&#39;LEFT&#39;</span>
+
+    <span class="k">def</span> <span class="nf">deflect_ball</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ball</span><span class="p">,</span> <span class="n">side_hit</span><span class="p">):</span>
+        <span class="c1"># balls don&#39;t deflect other balls</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Paddle</span> <span class="p">(</span><span class="n">BallDeflector</span><span class="p">):</span>
+
+    <span class="n">default_velocity</span> <span class="o">=</span> <span class="mf">4.0</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">up_key</span> <span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">down_key</span> <span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">left_key</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">right_key</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">img_file</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">initial_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">initial_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">game</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">BallDeflector</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_file</span><span class="o">=</span><span class="n">img_file</span><span class="p">,</span><span class="n">initial_x</span><span class="o">=</span><span class="n">initial_x</span><span class="p">,</span><span class="n">initial_y</span><span class="o">=</span><span class="n">initial_y</span><span class="p">,</span> <span class="n">game</span><span class="o">=</span><span class="n">game</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">player</span> <span class="o">=</span> <span class="n">player</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_key</span> <span class="o">=</span> <span class="n">up_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">down_key</span> <span class="o">=</span> <span class="n">down_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left_key</span> <span class="o">=</span> <span class="n">left_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_key</span> <span class="o">=</span> <span class="n">right_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pressed_keys</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_velocity</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">down_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span><span class="p">:</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mi">90</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">down_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mi">270</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">left_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mi">180</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">left_key</span> <span class="ow">in</span> <span class="n">pressed_keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">hit_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ball</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns a number between 0 and 1, representing how far up the paddle the ball hit.</span>
+<span class="sd">        If it hit near the top, the number will be close to 1.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="n">virtual_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">height</span>
+        <span class="n">y_dist</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>
+        <span class="n">pct</span> <span class="o">=</span> <span class="n">y_dist</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">virtual_height</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pct</span>
+
+
+<span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">side_paddle_buffer</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># how far away from the side wall a paddle should start</span>
+    <span class="n">aux_paddle_buffer</span> <span class="o">=</span> <span class="mi">550</span> <span class="c1"># how far away a forward paddle should start</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+        <span class="n">ball_img</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">paddle_imgs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">wall_imgs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="mi">450</span><span class="p">,</span>
+        <span class="n">game_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">wall_width</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="n">paddle_width</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="n">brick_height</span> <span class="o">=</span> <span class="mi">40</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game_window</span> <span class="o">=</span> <span class="n">game_window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hit_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">balls</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ball</span><span class="p">(</span><span class="n">img_file</span><span class="o">=</span> <span class="n">ball_img</span><span class="p">,</span>
+                         <span class="n">initial_x</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                         <span class="n">initial_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                         <span class="n">game</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+                      <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">paddles</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">Paddle</span><span class="p">(</span><span class="n">player</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="n">up_key</span><span class="o">=</span><span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">W</span><span class="p">,</span>
+                    <span class="n">down_key</span><span class="o">=</span><span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">S</span><span class="p">,</span>
+                    <span class="n">name</span> <span class="o">=</span><span class="s1">&#39;Player 1&#39;</span><span class="p">,</span>
+                    <span class="n">img_file</span> <span class="o">=</span> <span class="n">paddle_imgs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">initial_x</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">side_paddle_buffer</span> <span class="o">+</span> <span class="n">paddle_width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="n">initial_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="n">game</span><span class="o">=</span><span class="bp">self</span>
+                    <span class="p">),</span>
+            <span class="n">Paddle</span><span class="p">(</span><span class="n">player</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="n">up_key</span><span class="o">=</span><span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">U</span><span class="p">,</span>
+                    <span class="n">down_key</span><span class="o">=</span><span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">J</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Player 2&#39;</span><span class="p">,</span>
+                    <span class="n">img_file</span><span class="o">=</span><span class="n">paddle_imgs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                    <span class="n">initial_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">side_paddle_buffer</span> <span class="o">-</span> <span class="n">paddle_width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="n">initial_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="n">game</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">walls</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">BallDeflector</span><span class="p">(</span><span class="n">initial_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">#bottom</span>
+                <span class="n">initial_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="n">img_file</span> <span class="o">=</span> <span class="n">wall_imgs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">game</span> <span class="o">=</span> <span class="bp">self</span><span class="p">),</span>
+            <span class="n">BallDeflector</span><span class="p">(</span><span class="n">initial_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">#top</span>
+                <span class="n">initial_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">wall_width</span><span class="p">,</span>
+                <span class="n">img_file</span> <span class="o">=</span> <span class="n">wall_imgs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">game</span> <span class="o">=</span> <span class="bp">self</span><span class="p">),</span>
+            <span class="n">EndLine</span><span class="p">(</span><span class="n">initial_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">#left</span>
+                <span class="n">initial_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="n">img_file</span> <span class="o">=</span> <span class="n">wall_imgs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">game</span> <span class="o">=</span> <span class="bp">self</span><span class="p">),</span>
+            <span class="n">EndLine</span><span class="p">(</span><span class="n">initial_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">wall_width</span><span class="p">,</span> <span class="c1">#right</span>
+                <span class="n">initial_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="n">img_file</span> <span class="o">=</span> <span class="n">wall_imgs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">game</span> <span class="o">=</span> <span class="bp">self</span><span class="p">),</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bricks</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Not used in this initial version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game_objects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">walls</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bricks</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddles</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">balls</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pressed_keys</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Update the game based on the current state of its game objects and the set of keys currently</span>
+<span class="sd">        being pressed</span>
+<span class="sd">        :param pressed_keys: a set() object containing an int representing each key currently being pressed</span>
+<span class="sd">        The matching between numbers and keys is defined by Pyglet. For example, pyglet.window.key.W is</span>
+<span class="sd">        equal to 119</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># debug_print(&#39;Updating game state with currently pressed keys : &#39; + str(pressed_keys))</span>
+        <span class="k">for</span> <span class="n">game_object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_objects</span><span class="p">:</span>
+            <span class="n">game_object</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">pressed_keys</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pause</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="c1"># self.score = [0,0]</span>
+        <span class="k">for</span> <span class="n">game_object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_objects</span><span class="p">:</span>
+            <span class="n">game_object</span><span class="o">.</span><span class="n">set_initial_position</span><span class="p">()</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">hit_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Game reset&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game_window</span><span class="o">.</span><span class="n">redraw</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">pause</span><span class="p">:</span>
+            <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Pausing. Hit P to unpause&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">game_window</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">game_object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_objects</span><span class="p">:</span>
+            <span class="n">game_object</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">increment_hit_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># this method will be used in an exercise in discussion section</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hit_count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">class</span> <span class="nc">GameWindow</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ball_img</span><span class="p">,</span> <span class="n">paddle_imgs</span><span class="p">,</span> <span class="n">wall_imgs</span><span class="p">,</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">450</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">paused</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">ball_img</span><span class="p">,</span><span class="n">paddle_imgs</span><span class="p">,</span> <span class="n">wall_imgs</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currently_pressed_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1">#At any given moment, this holds the keys that are currently being pressed. This gets passed to Game.update() to help it decide how to move its various game objects</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score_label</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Score: 0 - 0&#39;</span><span class="p">,</span>
+                          <span class="n">font_name</span><span class="o">=</span><span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span>
+                          <span class="n">font_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+                          <span class="n">x</span><span class="o">=</span><span class="n">width</span><span class="o">-</span><span class="mi">75</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">height</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span>
+                          <span class="n">anchor_x</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">anchor_y</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Decide how often we want to update the game, which involves</span>
+        <span class="c1"># first telling the game object to update itself and all its objects</span>
+        <span class="c1"># and then rendering the updated game using</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fps</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#Number of frames per seconds</span>
+
+        <span class="c1">#This tells Pyglet to call Window.update() once every fps-th of a second</span>
+        <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">)</span>
+        <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">set_fps_limit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_key_press</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">modifiers</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This is an overwrite of pyglet.window.Window.on_key_press()</span>
+<span class="sd">        This gets called by the pyglet engine whenever a key is pressed. Whenever that happens,</span>
+<span class="sd">        we want to add each key being pressed to the set of currently-pressed keys if it isn&#39;t</span>
+<span class="sd">        already in there</span>
+<span class="sd">        That&#39;s if the key pressed isn&#39;t &#39;Q&#39; or &#39;Esc&#39;. If it is, then just quit.</span>
+<span class="sd">        :param symbol: a single key identified as an int</span>
+<span class="sd">        :param modifiers: I don&#39;t know what this is. I am ignoring this.</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="n">symbol</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">Q</span> <span class="ow">or</span> <span class="n">symbol</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">ESCAPE</span><span class="p">:</span>
+            <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Exit key detected. Exiting game...&#39;</span><span class="p">)</span>
+            <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">symbol</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">R</span><span class="p">:</span>
+            <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Resetting...&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">symbol</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">P</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">paused</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">unpause</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">currently_pressed_keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">currently_pressed_keys</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">pause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Pausing&#39;</span><span class="p">)</span>
+        <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">unschedule</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">paused</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">unpause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">debug_print</span><span class="p">(</span><span class="s1">&#39;Unpausing&#39;</span><span class="p">)</span>
+        <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">paused</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">on_key_release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">modifiers</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">currently_pressed_keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">currently_pressed_keys</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">currently_pressed_keys</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redraw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">redraw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score_label</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">redraw_label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score_label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Score: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; - &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">debug_print</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    A little convenience function that prints the string if the global debug variable is True,</span>
+<span class="sd">    and otherwise does nothing</span>
+<span class="sd">    :param string:</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">debug_print</span><span class="p">(</span><span class="s2">&quot;Initializing window...&quot;</span><span class="p">)</span>
+    <span class="n">ball_img</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;ball.png&#39;</span><span class="p">)</span>
+    <span class="c1"># ball_img = pyglet.resource.image(&#39;vertical_wall.png&#39;)</span>
+    <span class="n">paddle_imgs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;paddle1.png&#39;</span><span class="p">),</span>
+                   <span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;paddle2.png&#39;</span><span class="p">)]</span>
+    <span class="n">wall_imgs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;vertical_wall.png&#39;</span><span class="p">),</span>
+                 <span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;horizontal_wall.png&#39;</span><span class="p">),</span>
+                 <span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;brick.png&#39;</span><span class="p">)]</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">GameWindow</span><span class="p">(</span><span class="n">ball_img</span><span class="p">,</span><span class="n">paddle_imgs</span><span class="p">,</span> <span class="n">wall_imgs</span><span class="p">)</span>
+    <span class="n">debug_print</span><span class="p">(</span><span class="s2">&quot;Done initializing window! Initializing app...&quot;</span><span class="p">)</span>
+
+    <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Scheduling Periodic Actions' data-toggle="tooltip">
+    <a href="schedulingEvents.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="schedulingEvents.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Introduction: Test Cases' data-toggle="tooltip" >
+    <a href="../Testing/intro-TestCases.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../Testing/intro-TestCases.html" >Next Section - Introduction: Test Cases</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

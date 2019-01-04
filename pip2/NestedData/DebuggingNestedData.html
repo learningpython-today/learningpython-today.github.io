@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Extracting from Nested Data &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extra Exercises" href="ExtraExercises.html" />
+    <link rel="prev" title="Nested Iteration" href="NestedIteration.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Extracting from Nested Data</a><ul>
+<li><a class="reference internal" href="#understand">Understand</a></li>
+<li><a class="reference internal" href="#extract">Extract</a></li>
+<li><a class="reference internal" href="#repeat">Repeat</a><ul>
+<li><a class="reference internal" href="#level-2">Level 2</a></li>
+<li><a class="reference internal" href="#level-3">Level 3</a></li>
+<li><a class="reference internal" href="#level-4">Level 4</a></li>
+<li><a class="reference internal" href="#reflections">Reflections</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Nested Iteration" data-toggle="tooltip">
+    <a href="NestedIteration.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Extra Exercises' data-toggle="tooltip" >
+    <a href="ExtraExercises.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="extracting-from-nested-data">
+<span id="debug-nested-chap"></span><h1>Extracting from Nested Data<a class="headerlink" href="#extracting-from-nested-data" title="Permalink to this headline">¶</a></h1>
+<p>A common problem, especially when dealing with data returned from a web site, is to extract certain elements from deep inside a nested data structure. In principle, there’s nothing more difficult about pulling something out from deep inside a nested data structure: with lists, you use [] to index or a for loop to get them them all; with dictionaries, you get the value associated with a particular key using []. But it’s easy to get lost in the process and think you’ve extracted something different than you really have. Because of this, we have created a usable technique to help you during the debugging process.</p>
+<p>Follow the system described below and you will have success with extracting nested data. The process involves the following steps:</p>
+<ol class="arabic simple">
+<li>Understand the nested data object.</li>
+<li>Extract one object at the next level down.</li>
+<li>Repeat the process with the extracted object</li>
+</ol>
+<p>Understand. Extract. Repeat.</p>
+<p>To illustrate this, we will walk through extracting information from the data returned from the Twitter API, which you will work with later in the course. This nested dictionary results from querying Twitter, asking for three tweets matching “University of Michigan”. As you’ll see, it’s quite a daunting data structure, even when printed with nice indentation as it’s shown below.</p>
+
+<div data-childcomponent="extract_nested_data_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+res = {
+  "search_metadata": {
+    "count": 3,
+    "completed_in": 0.015,
+    "max_id_str": "536624519285583872",
+    "since_id_str": "0",
+    "next_results": "?max_id=536623674942439424&q=University%20of%20Michigan&count=3&include_entities=1",
+    "refresh_url": "?since_id=536624519285583872&q=University%20of%20Michigan&include_entities=1",
+    "since_id": 0,
+    "query": "University+of+Michigan",
+    "max_id": 536624519285583872
+  },
+  "statuses": [
+    {
+      "contributors": None,
+      "truncated": False,
+      "text": "RT @mikeweber25: I'm decommiting from the university of Michigan thank you Michigan for the love and support I'll remake my decision at the\u2026",
+      "in_reply_to_status_id": None,
+      "id": 536624519285583872,
+      "favorite_count": 0,
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "retweeted": False,
+      "coordinates": None,
+      "entities": {
+        "symbols": [],
+        "user_mentions": [
+          {
+            "id": 1119996684,
+            "indices": [
+              3,
+              15
+            ],
+            "id_str": "1119996684",
+            "screen_name": "mikeweber25",
+            "name": "Mikey"
+          }
+        ],
+        "hashtags": [],
+        "urls": []
+      },
+      "in_reply_to_screen_name": None,
+      "in_reply_to_user_id": None,
+      "retweet_count": 2014,
+      "id_str": "536624519285583872",
+      "favorited": False,
+      "retweeted_status": {
+        "contributors": None,
+        "truncated": False,
+        "text": "I'm decommiting from the university of Michigan thank you Michigan for the love and support I'll remake my decision at the army bowl",
+        "in_reply_to_status_id": None,
+        "id": 536300265616322560,
+        "favorite_count": 1583,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "retweeted": False,
+        "coordinates": None,
+        "entities": {
+          "symbols": [],
+          "user_mentions": [],
+          "hashtags": [],
+          "urls": []
+        },
+        "in_reply_to_screen_name": None,
+        "in_reply_to_user_id": None,
+        "retweet_count": 2014,
+        "id_str": "536300265616322560",
+        "favorited": False,
+        "user": {
+          "follow_request_sent": False,
+          "profile_use_background_image": True,
+          "profile_text_color": "666666",
+          "default_profile_image": False,
+          "id": 1119996684,
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
+          "verified": False,
+          "profile_location": None,
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/534465900343083008/A09dIq1d_normal.jpeg",
+          "profile_sidebar_fill_color": "252429",
+          "entities": {
+            "description": {
+              "urls": []
+            }
+          },
+          "followers_count": 5444,
+          "profile_sidebar_border_color": "FFFFFF",
+          "id_str": "1119996684",
+          "profile_background_color": "C0DEED",
+          "listed_count": 36,
+          "is_translation_enabled": False,
+          "utc_offset": None,
+          "statuses_count": 6525,
+          "description": "Mike Weber (U.S Army All American) DETROIT CTSENIOR State Champion",
+          "friends_count": 693,
+          "location": "",
+          "profile_link_color": "0084B4",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/534465900343083008/A09dIq1d_normal.jpeg",
+          "following": False,
+          "geo_enabled": False,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/1119996684/1416261575",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+          "name": "Mikey",
+          "lang": "en",
+          "profile_background_tile": False,
+          "favourites_count": 1401,
+          "screen_name": "mikeweber25",
+          "notifications": False,
+          "url": None,
+          "created_at": "Fri Jan 25 18:45:53 +0000 2013",
+          "contributors_enabled": False,
+          "time_zone": None,
+          "protected": False,
+          "default_profile": False,
+          "is_translator": False
+        },
+        "geo": None,
+        "in_reply_to_user_id_str": None,
+        "lang": "en",
+        "created_at": "Sat Nov 22 23:28:41 +0000 2014",
+        "in_reply_to_status_id_str": None,
+        "place": None,
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        }
+      },
+      "user": {
+        "follow_request_sent": False,
+        "profile_use_background_image": True,
+        "profile_text_color": "333333",
+        "default_profile_image": False,
+        "id": 2435537208,
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "verified": False,
+        "profile_location": None,
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/532694075947110400/oZEP5XNQ_normal.jpeg",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "followers_count": 161,
+        "profile_sidebar_border_color": "C0DEED",
+        "id_str": "2435537208",
+        "profile_background_color": "C0DEED",
+        "listed_count": 0,
+        "is_translation_enabled": False,
+        "utc_offset": None,
+        "statuses_count": 524,
+        "description": "Delasalle '17 Baseball & Football.",
+        "friends_count": 255,
+        "location": "",
+        "profile_link_color": "0084B4",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/532694075947110400/oZEP5XNQ_normal.jpeg",
+        "following": False,
+        "geo_enabled": False,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2435537208/1406779364",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "name": "Andrew Brooks",
+        "lang": "en",
+        "profile_background_tile": False,
+        "favourites_count": 555,
+        "screen_name": "31brooks_",
+        "notifications": False,
+        "url": None,
+        "created_at": "Wed Apr 09 14:34:41 +0000 2014",
+        "contributors_enabled": False,
+        "time_zone": None,
+        "protected": False,
+        "default_profile": True,
+        "is_translator": False
+      },
+      "geo": None,
+      "in_reply_to_user_id_str": None,
+      "lang": "en",
+      "created_at": "Sun Nov 23 20:57:10 +0000 2014",
+      "in_reply_to_status_id_str": None,
+      "place": None,
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      }
+    },
+    {
+      "contributors": None,
+      "truncated": False,
+      "text": "RT @Plantedd: The University of Michigan moved a big Bur Oak yesterday. 65ft tall. 350+ tons. http://t.co/v2Y6vl3f9e",
+      "in_reply_to_status_id": None,
+      "id": 536624216305848320,
+      "favorite_count": 0,
+      "source": "<a href=\"http://tapbots.com/tweetbot\" rel=\"nofollow\">Tweetbot for i\u039fS</a>",
+      "retweeted": False,
+      "coordinates": None,
+      "entities": {
+        "symbols": [],
+        "user_mentions": [
+          {
+            "id": 462890283,
+            "indices": [
+              3,
+              12
+            ],
+            "id_str": "462890283",
+            "screen_name": "Plantedd",
+            "name": "David Wong"
+          }
+        ],
+        "hashtags": [],
+        "urls": [],
+        "media": [
+          {
+            "source_status_id_str": "526276522374889472",
+            "expanded_url": "http://twitter.com/Plantedd/status/526276522374889472/photo/1",
+            "display_url": "pic.twitter.com/v2Y6vl3f9e",
+            "url": "http://t.co/v2Y6vl3f9e",
+            "media_url_https": "https://pbs.twimg.com/media/B021tLsIYAADq21.jpg",
+            "source_status_id": 526276522374889472,
+            "id_str": "526276519308845056",
+            "sizes": {
+              "small": {
+                "h": 191,
+                "resize": "fit",
+                "w": 340
+              },
+              "large": {
+                "h": 576,
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 337,
+                "resize": "fit",
+                "w": 600
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "indices": [
+              94,
+              116
+            ],
+            "type": "photo",
+            "id": 526276519308845056,
+            "media_url": "http://pbs.twimg.com/media/B021tLsIYAADq21.jpg"
+          }
+        ]
+      },
+      "in_reply_to_screen_name": None,
+      "in_reply_to_user_id": None,
+      "retweet_count": 27,
+      "id_str": "536624216305848320",
+      "favorited": False,
+      "retweeted_status": {
+        "contributors": None,
+        "truncated": False,
+        "text": "The University of Michigan moved a big Bur Oak yesterday. 65ft tall. 350+ tons. http://t.co/v2Y6vl3f9e",
+        "in_reply_to_status_id": None,
+        "id": 526276522374889472,
+        "favorite_count": 25,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "retweeted": False,
+        "coordinates": None,
+        "entities": {
+          "symbols": [],
+          "user_mentions": [],
+          "hashtags": [],
+          "urls": [],
+          "media": [
+            {
+              "expanded_url": "http://twitter.com/Plantedd/status/526276522374889472/photo/1",
+              "display_url": "pic.twitter.com/v2Y6vl3f9e",
+              "url": "http://t.co/v2Y6vl3f9e",
+              "media_url_https": "https://pbs.twimg.com/media/B021tLsIYAADq21.jpg",
+              "id_str": "526276519308845056",
+              "sizes": {
+                "small": {
+                  "h": 191,
+                  "resize": "fit",
+                  "w": 340
+                },
+                "large": {
+                  "h": 576,
+                  "resize": "fit",
+                  "w": 1024
+                },
+                "medium": {
+                  "h": 337,
+                  "resize": "fit",
+                  "w": 600
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "indices": [
+                80,
+                102
+              ],
+              "type": "photo",
+              "id": 526276519308845056,
+              "media_url": "http://pbs.twimg.com/media/B021tLsIYAADq21.jpg"
+            }
+          ]
+        },
+        "in_reply_to_screen_name": None,
+        "in_reply_to_user_id": None,
+        "retweet_count": 27,
+        "id_str": "526276522374889472",
+        "favorited": False,
+        "user": {
+          "follow_request_sent": False,
+          "profile_use_background_image": True,
+          "profile_text_color": "333333",
+          "default_profile_image": False,
+          "id": 462890283,
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "verified": False,
+          "profile_location": None,
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1791926707/Plantedd_Logo__square__normal.jpg",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "http://t.co/ZOnsCHvoKt",
+                  "indices": [
+                    0,
+                    22
+                  ],
+                  "expanded_url": "http://www.plantedd.com",
+                  "display_url": "plantedd.com"
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "followers_count": 2598,
+          "profile_sidebar_border_color": "C0DEED",
+          "id_str": "462890283",
+          "profile_background_color": "C0DEED",
+          "listed_count": 61,
+          "is_translation_enabled": False,
+          "utc_offset": 0,
+          "statuses_count": 8157,
+          "description": "Hello, I'm the supervillain behind Plantedd. We're an online market for plant lovers plotting to take over the world by making it simple to find and buy plants.",
+          "friends_count": 2664,
+          "location": "UK",
+          "profile_link_color": "0084B4",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1791926707/Plantedd_Logo__square__normal.jpg",
+          "following": False,
+          "geo_enabled": False,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/462890283/1398254314",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "name": "David Wong",
+          "lang": "en",
+          "profile_background_tile": False,
+          "favourites_count": 371,
+          "screen_name": "Plantedd",
+          "notifications": False,
+          "url": "http://t.co/ZOnsCHvoKt",
+          "created_at": "Fri Jan 13 13:46:46 +0000 2012",
+          "contributors_enabled": False,
+          "time_zone": "Edinburgh",
+          "protected": False,
+          "default_profile": True,
+          "is_translator": False
+        },
+        "geo": None,
+        "in_reply_to_user_id_str": None,
+        "possibly_sensitive": False,
+        "lang": "en",
+        "created_at": "Sun Oct 26 07:37:55 +0000 2014",
+        "in_reply_to_status_id_str": None,
+        "place": None,
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        }
+      },
+      "user": {
+        "follow_request_sent": False,
+        "profile_use_background_image": True,
+        "profile_text_color": "2A48AE",
+        "default_profile_image": False,
+        "id": 104940733,
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+        "verified": False,
+        "profile_location": None,
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2878477539/78e20432088b5ee2addc9ce3362fd461_normal.jpeg",
+        "profile_sidebar_fill_color": "6378B1",
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "followers_count": 149,
+        "profile_sidebar_border_color": "FBD0C9",
+        "id_str": "104940733",
+        "profile_background_color": "0C003D",
+        "listed_count": 18,
+        "is_translation_enabled": False,
+        "utc_offset": 0,
+        "statuses_count": 16031,
+        "description": "Have you any dreams you'd like to sell?",
+        "friends_count": 248,
+        "location": "",
+        "profile_link_color": "0F1B7C",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2878477539/78e20432088b5ee2addc9ce3362fd461_normal.jpeg",
+        "following": False,
+        "geo_enabled": False,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/104940733/1410032966",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+        "name": "Heather",
+        "lang": "en",
+        "profile_background_tile": False,
+        "favourites_count": 777,
+        "screen_name": "froyoho",
+        "notifications": False,
+        "url": None,
+        "created_at": "Thu Jan 14 21:37:54 +0000 2010",
+        "contributors_enabled": False,
+        "time_zone": "London",
+        "protected": False,
+        "default_profile": False,
+        "is_translator": False
+      },
+      "geo": None,
+      "in_reply_to_user_id_str": None,
+      "possibly_sensitive": False,
+      "lang": "en",
+      "created_at": "Sun Nov 23 20:55:57 +0000 2014",
+      "in_reply_to_status_id_str": None,
+      "place": None,
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      }
+    },
+    {
+      "contributors": None,
+      "truncated": False,
+      "text": "RT @NotableHistory: Madonna, 18 year old freshman at the University of Michigan, 1976 http://t.co/x2dm1G67ea",
+      "in_reply_to_status_id": None,
+      "id": 536623674942439425,
+      "favorite_count": 0,
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "retweeted": False,
+      "coordinates": None,
+      "entities": {
+        "symbols": [],
+        "user_mentions": [
+          {
+            "id": 844766941,
+            "indices": [
+              3,
+              18
+            ],
+            "id_str": "844766941",
+            "screen_name": "NotableHistory",
+            "name": "OnThisDay & Facts"
+          }
+        ],
+        "hashtags": [],
+        "urls": [],
+        "media": [
+          {
+            "source_status_id_str": "536610190334779392",
+            "expanded_url": "http://twitter.com/NotableHistory/status/536610190334779392/photo/1",
+            "display_url": "pic.twitter.com/x2dm1G67ea",
+            "url": "http://t.co/x2dm1G67ea",
+            "media_url_https": "https://pbs.twimg.com/media/B3EXbQkCMAEipwM.jpg",
+            "source_status_id": 536610190334779392,
+            "id_str": "536235587703812097",
+            "sizes": {
+              "small": {
+                "h": 487,
+                "resize": "fit",
+                "w": 340
+              },
+              "large": {
+                "h": 918,
+                "resize": "fit",
+                "w": 640
+              },
+              "medium": {
+                "h": 860,
+                "resize": "fit",
+                "w": 600
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "indices": [
+              86,
+              108
+            ],
+            "type": "photo",
+            "id": 536235587703812097,
+            "media_url": "http://pbs.twimg.com/media/B3EXbQkCMAEipwM.jpg"
+          }
+        ]
+      },
+      "in_reply_to_screen_name": None,
+      "in_reply_to_user_id": None,
+      "retweet_count": 9,
+      "id_str": "536623674942439425",
+      "favorited": False,
+      "retweeted_status": {
+        "contributors": None,
+        "truncated": False,
+        "text": "Madonna, 18 year old freshman at the University of Michigan, 1976 http://t.co/x2dm1G67ea",
+        "in_reply_to_status_id": None,
+        "id": 536610190334779392,
+        "favorite_count": 13,
+        "source": "<a href=\"https://ads.twitter.com\" rel=\"nofollow\">Twitter Ads</a>",
+        "retweeted": False,
+        "coordinates": None,
+        "entities": {
+          "symbols": [],
+          "user_mentions": [],
+          "hashtags": [],
+          "urls": [],
+          "media": [
+            {
+              "expanded_url": "http://twitter.com/NotableHistory/status/536610190334779392/photo/1",
+              "display_url": "pic.twitter.com/x2dm1G67ea",
+              "url": "http://t.co/x2dm1G67ea",
+              "media_url_https": "https://pbs.twimg.com/media/B3EXbQkCMAEipwM.jpg",
+              "id_str": "536235587703812097",
+              "sizes": {
+                "small": {
+                  "h": 487,
+                  "resize": "fit",
+                  "w": 340
+                },
+                "large": {
+                  "h": 918,
+                  "resize": "fit",
+                  "w": 640
+                },
+                "medium": {
+                  "h": 860,
+                  "resize": "fit",
+                  "w": 600
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "indices": [
+                66,
+                88
+              ],
+              "type": "photo",
+              "id": 536235587703812097,
+              "media_url": "http://pbs.twimg.com/media/B3EXbQkCMAEipwM.jpg"
+            }
+          ]
+        },
+        "in_reply_to_screen_name": None,
+        "in_reply_to_user_id": None,
+        "retweet_count": 9,
+        "id_str": "536610190334779392",
+        "favorited": False,
+        "user": {
+          "follow_request_sent": False,
+          "profile_use_background_image": True,
+          "profile_text_color": "333333",
+          "default_profile_image": False,
+          "id": 844766941,
+          "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/458461302696837121/rGlGdWsc.png",
+          "verified": False,
+          "profile_location": None,
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/481243404320251905/gCr1cVP2_normal.png",
+          "profile_sidebar_fill_color": "DDFFCC",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "http://t.co/9fTPk5A4wh",
+                  "indices": [
+                    0,
+                    22
+                  ],
+                  "expanded_url": "http://notablefacts.com/",
+                  "display_url": "notablefacts.com"
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "followers_count": 73817,
+          "profile_sidebar_border_color": "FFFFFF",
+          "id_str": "844766941",
+          "profile_background_color": "9AE4E8",
+          "listed_count": 485,
+          "is_translation_enabled": False,
+          "utc_offset": -21600,
+          "statuses_count": 38841,
+          "description": "On This Day in History, Historical Pictures & other Interesting Facts....Historyfollower@gmail.com",
+          "friends_count": 43594,
+          "location": "",
+          "profile_link_color": "0084B4",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/481243404320251905/gCr1cVP2_normal.png",
+          "following": False,
+          "geo_enabled": False,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/844766941/1411076349",
+          "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/458461302696837121/rGlGdWsc.png",
+          "name": "OnThisDay & Facts",
+          "lang": "en",
+          "profile_background_tile": True,
+          "favourites_count": 1383,
+          "screen_name": "NotableHistory",
+          "notifications": False,
+          "url": "http://t.co/9fTPk5A4wh",
+          "created_at": "Tue Sep 25 03:08:59 +0000 2012",
+          "contributors_enabled": False,
+          "time_zone": "Central Time (US & Canada)",
+          "protected": False,
+          "default_profile": False,
+          "is_translator": False
+        },
+        "geo": None,
+        "in_reply_to_user_id_str": None,
+        "possibly_sensitive": False,
+        "lang": "en",
+        "created_at": "Sun Nov 23 20:00:13 +0000 2014",
+        "in_reply_to_status_id_str": None,
+        "place": None,
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        }
+      },
+      "user": {
+        "follow_request_sent": False,
+        "profile_use_background_image": True,
+        "profile_text_color": "333333",
+        "default_profile_image": False,
+        "id": 818185729,
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "verified": False,
+        "profile_location": None,
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/486215801498640384/rz9o7LnF_normal.jpeg",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "followers_count": 302,
+        "profile_sidebar_border_color": "C0DEED",
+        "id_str": "818185729",
+        "profile_background_color": "C0DEED",
+        "listed_count": 0,
+        "is_translation_enabled": False,
+        "utc_offset": None,
+        "statuses_count": 395,
+        "description": "Formerly with California Dept of General Services, now freelancing around the Sacramento area...",
+        "friends_count": 1521,
+        "location": "Citrus Heights, CA",
+        "profile_link_color": "0084B4",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/486215801498640384/rz9o7LnF_normal.jpeg",
+        "following": False,
+        "geo_enabled": True,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/818185729/1383764759",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "name": "M Duncan",
+        "lang": "en",
+        "profile_background_tile": False,
+        "favourites_count": 6544,
+        "screen_name": "MDuncan95814",
+        "notifications": False,
+        "url": None,
+        "created_at": "Tue Sep 11 21:02:09 +0000 2012",
+        "contributors_enabled": False,
+        "time_zone": None,
+        "protected": False,
+        "default_profile": True,
+        "is_translator": False
+      },
+      "geo": None,
+      "in_reply_to_user_id_str": None,
+      "possibly_sensitive": False,
+      "lang": "en",
+      "created_at": "Sun Nov 23 20:53:48 +0000 2014",
+      "in_reply_to_status_id_str": None,
+      "place": None,
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      }
+    }
+  ]
+}
+</textarea>
+</div>
+<div class="section" id="understand">
+<h2>Understand<a class="headerlink" href="#understand" title="Permalink to this headline">¶</a></h2>
+<p>At any level of the extraction process, the first task is to make sure you understand the current object you have extracted. There are few options here.</p>
+<ol class="arabic simple">
+<li>Print the entire object. If it’s small enough, you may be able to make sense of the printout directly. If it’s a little bit larger, you may find it helpful to “pretty-print” it, with indentation showing the level of nesting of the data. We don’t have a way to pretty-print in our online browser-based environment, but if you’re running code with a full python interpreter, you can use the dumps function in the json module. For example:</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>If printing the entire object gives you something that’s too unwieldy, you have other options for making sense of it.<ul>
+<li>Print the type of the object.</li>
+<li><dl class="first docutils">
+<dt>If it’s a dictionary:</dt>
+<dd><ul class="first last">
+<li>print the keys</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If it’s a list:</dt>
+<dd><ul class="first last">
+<li>print its length</li>
+<li>print the type of the first item</li>
+<li>print the first item if it’s of manageable size</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ol>
+
+<div data-childcomponent="extract_nested_data_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_2 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+print(type(res))
+print(res.keys())
+</textarea>
+</div>
+</div>
+<div class="section" id="extract">
+<h2>Extract<a class="headerlink" href="#extract" title="Permalink to this headline">¶</a></h2>
+<p>In the extraction phase, you will be diving one level deeper into the nested data.</p>
+<ol class="arabic simple">
+<li>If it’s a dictionary, figure out which key has the value you’re looking for, and get its value. For example: <code class="docutils literal notranslate"><span class="pre">res2</span> <span class="pre">=</span> <span class="pre">res['statuses']</span></code></li>
+<li>If it’s a list, you will typically be wanting to do something with each of the items (e.g., extracting something from each, and accumulating them in a list). For that you’ll want a for loop, such as <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">res2</span> <span class="pre">in</span> <span class="pre">res</span></code>. During your exploration phase, however, it will be easier to debug things if you work with just one item. One trick for doing that is to iterate over a slice of the list containing just one item. For example, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">res2</span> <span class="pre">in</span> <span class="pre">res[:1]</span></code>.</li>
+</ol>
+
+<div data-childcomponent="extract_nested_data_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_3 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+print(type(res))
+print(res.keys())
+res2 = res['statuses']
+</textarea>
+</div>
+</div>
+<div class="section" id="repeat">
+<h2>Repeat<a class="headerlink" href="#repeat" title="Permalink to this headline">¶</a></h2>
+<p>Now you’ll repeat the Understand and Extract processes at the next level.</p>
+<div class="section" id="level-2">
+<h3>Level 2<a class="headerlink" href="#level-2" title="Permalink to this headline">¶</a></h3>
+<p>First understand.</p>
+
+<div data-childcomponent="extract_nested_data_3a" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_3a data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+print(type(res))
+print(res.keys())
+res2 = res['statuses']
+print(type(res2)) # it's a list!
+print(len(res2))  # looks like one item representing each of the three tweets
+</textarea>
+</div>
+<p>It’s a list, with three items, so it’s a good guess that each item represents one tweet.</p>
+<p>Now extract. Since it’s a list, we’ll want to work with each item, but to keep things manageable for now, let’s use the trick for just looking at the first item.</p>
+
+<div data-childcomponent="extract_nested_data_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_4 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+print(type(res))
+print(res.keys())
+res2 = res['statuses']
+print(type(res2)) # it's a list!
+print(len(res2))  # looks like one item representing each of the three tweets
+for res3 in res2[:1]:
+    print("working with a tweet, bound to variable res3")
+</textarea>
+</div>
+</div>
+<div class="section" id="level-3">
+<h3>Level 3<a class="headerlink" href="#level-3" title="Permalink to this headline">¶</a></h3>
+<p>First understand.</p>
+
+<div data-childcomponent="extract_nested_data_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_5 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+print(type(res))
+print(res.keys())
+res2 = res['statuses']
+print(type(res2)) # it's a list!
+print(len(res2))  # looks like one item representing each of the three tweets
+for res3 in res2[:1]:
+    print(type(res3)) # it's a dictionary
+    print(res3.keys())
+</textarea>
+</div>
+<p>Then extract. Let’s pull out the information about who sent each of the tweets. Probably that’s the value associated with the ‘user’ key.</p>
+
+<div data-childcomponent="extract_nested_data_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_6 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+#print(type(res))
+#print(res.keys())
+res2 = res['statuses']
+#print(type(res2)) # it's a list!
+#print(len(res2))  # looks like one item representing each of the three tweets
+for res3 in res2[:1]:
+    #print(type(res3)) # it's a dictionary
+    #print(res3.keys())
+    res4 = res3['user']
+</textarea>
+</div>
+<p>Now repeat.</p>
+</div>
+<div class="section" id="level-4">
+<h3>Level 4<a class="headerlink" href="#level-4" title="Permalink to this headline">¶</a></h3>
+<p>Understand.</p>
+
+<div data-childcomponent="extract_nested_data_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_7 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+#print(type(res))
+#print(res.keys())
+res2 = res['statuses']
+#print(type(res2)) # it's a list!
+#print(len(res2))  # looks like one item representing each of the three tweets
+for res3 in res2[:1]:
+    #print(type(res3)) # it's a dictionary
+    #print(res3.keys())
+    res4 = res3['user']
+    print(type(res4)) # it's a dictionary
+    print(res4.keys())
+</textarea>
+</div>
+<p>Extract. Let’s print out the user’s screen name and when their account was created.</p>
+
+<div data-childcomponent="extract_nested_data_8" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_8 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+#print(type(res))
+#print(res.keys())
+res2 = res['statuses']
+#print(type(res2)) # it's a list!
+#print(len(res2))  # looks like one item representing each of the three tweets
+for res3 in res2[:1]:
+    #print(type(res3)) # it's a dictionary
+    #print(res3.keys())
+    res4 = res3['user']
+    print(type(res4)) # it's a dictionary
+    print(res4.keys())
+    print(res4['screen_name'], res4['created_at'])
+</textarea>
+</div>
+<p>Now, we may want to go back have it extract for all the items rather than only the first item in res2.</p>
+
+<div data-childcomponent="extract_nested_data_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_9 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+#print(type(res))
+#print(res.keys())
+res2 = res['statuses']
+#print(type(res2)) # it's a list!
+#print(len(res2))  # looks like one item representing each of the three tweets
+for res3 in res2:
+    #print(type(res3)) # it's a dictionary
+    #print(res3.keys())
+    res4 = res3['user']
+    #print(type(res4)) # it's a dictionary
+    #print(res4.keys())
+    print(res4['screen_name'], res4['created_at'])
+</textarea>
+</div>
+</div>
+<div class="section" id="reflections">
+<h3>Reflections<a class="headerlink" href="#reflections" title="Permalink to this headline">¶</a></h3>
+<p>Notice that each time we descend a level in a dictionary, we have a [] picking out a key. Each time we look inside a list, we will have a for loop. If there are lists at multiple levels, we will have nested for loops.</p>
+<p>Once you’ve figured out how to extract everything you want, you <em>may</em> choose to collapse things with multiple extractions in a single expression. For example, we could have this shorter version.</p>
+
+<div data-childcomponent="extract_nested_data_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=extract_nested_data_10 data-lang="python" 
+     data-include="extract_nested_data_1" data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+for res3 in res['statuses']:
+    print(res3['user']['screen_name'], res3['user']['created_at'])
+</textarea>
+</div>
+<p>Even with this compact code, we can still count off how many levels of nesting we have extracted from, in this case four. res[‘statuses’] says we have descended one level (in a dictionary). for res3 in… says we are have descended another level (in a list). [‘user’] is descending one more level, and [‘screen_name’] is descending one more level.</p>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Nested Iteration' data-toggle="tooltip">
+    <a href="NestedIteration.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="NestedIteration.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Extra Exercises' data-toggle="tooltip" >
+    <a href="ExtraExercises.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ExtraExercises.html" >Next Section - Extra Exercises</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

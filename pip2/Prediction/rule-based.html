@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Rule-Based Prediction Algorithms &#8212; Programs, Information, and People: Interactive Edition</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Shannon Game: Guessing the Next Letter in a Text" href="shannon_guesser.html" />
+    <link rel="prev" title="Guessing letters in Hangman" href="hangman_guesser.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pip2';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = true;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Table of Contents</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+<!--            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li> -->
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/pip2/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Rule-Based Prediction Algorithms</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Guessing letters in Hangman" data-toggle="tooltip">
+    <a href="hangman_guesser.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - The Shannon Game: Guessing the Next Letter in a Text' data-toggle="tooltip" >
+    <a href="shannon_guesser.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="rule-based-prediction-algorithms">
+<h1>Rule-Based Prediction Algorithms<a class="headerlink" href="#rule-based-prediction-algorithms" title="Permalink to this headline">¶</a></h1>
+<p>A rule-based prediction program consists of a collection of rules. Each rule has the structure of an if-then statement. The if part checks for some Boolean condition on the <em>features</em> of an item. When the condition is true, the then part provides something to be used in the final output. In the programs we consider, the rules will be collected in an ordered list, so that rules earlier in the list take precedence over rules later in the list if they produce conflicting outputs.</p>
+<p>Consider, first, the classification task of automatically labeling people’s names with genders: “male” or “female”. In the code below, the variables males and females are set to hold some pre-labeled data. (If you’re wondering why these names are so unusual, they are a random sample from a corpus of names that is distributed with the NLTK (Natural Language ToolKit) python package.)</p>
+
+<div data-childcomponent="prediction_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+males = ['Barde', 'Ali', 'Marcio', 'Tyrone', 'Gabriel', 'Gerrard', 'Lawrence', 'Knox', 'Kurtis', 'Adrian', 'Arlo', 'Wilburt', 'Barney', 'Thadeus', 'Kalil', 'Zacharia', 'Ruben', 'Yigal', 'Paddie', 'Francis', 'Eliot', 'Bud', 'Zebulen', 'Hartwell', 'Daniel', 'Gerold', 'Reynold', 'Solomon', 'Kingsly', 'Haydon', 'Edgardo', 'Ford', 'Gregorio', 'Cory', 'Drew', 'Rodrique', 'Flin', 'Ginger', 'Bard', 'Wye', 'Yacov', 'Theo', 'Lindsey', 'Penn', 'Raleigh', 'Phineas', 'Ulric', 'Dion', 'Zary', 'Ricardo']
+
+females = ['Erinna', 'Orelee', 'Melisandra', 'Dorotea', 'Alvinia', 'Leena', 'Milli', 'Beckie', 'Sascha', 'Cortney', 'Cheri', 'Shanda', 'Catrina', 'Anestassia', 'Cher', 'Randy', 'Charline', 'Brigit', 'Rafaelia', 'Shelagh', 'Cherish', 'Zorana', 'Shay', 'Beatrice', 'Jeannette', 'Briana', 'Lynne', 'Kattie', 'Tobye', 'Marietta', 'Vilma', 'Meggi', 'Ondrea', 'Idell', 'Yoshi', 'Fanechka', 'Andria', 'Denys', 'Darb', 'Roby', 'Philippa', 'Alecia', 'Lanni', 'Hatti', 'Simonette', 'Celeste', 'Inesita', 'Else', 'Hulda', 'Lela']
+</textarea>
+</div>
+<p>If you look at these samples of names, one thing that might jump out at you is that most, though not all, of the names ending in i, e, and a are female. So, we could make a crude classifier as follows.</p>
+
+<div data-childcomponent="prediction_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+def final_e(s):
+    return s[-1] == 'e'
+def final_a(s):
+    return s[-1] == 'a'
+def final_i(s):
+    return s[-1] == 'i'
+
+def classify(s):
+    if final_e(s):
+        return "female"
+    if final_a(s):
+        return "female"
+    if final_i(s):
+        return "female"
+    return "male"
+
+print(classify("Mark"))
+print(classify("Julie"))
+</textarea>
+</div>
+<p>Note the structure of the classify() function. It checks each of the three rules, in turn. Each rule checks for an indicator of whether the name is female. If any of them match, it returns “female”. If none of the rules matches, it returns male. Think of “return male” as the <strong>default rule</strong> or “male” as the <strong>default label</strong> for this classifier. Given that structure, we might implement things a little more cleanly. We can think of each rule as having a boolean function (the if part) and an outcome (“male” or “female”). This is represented as a tuple in the code below. rls is a list of such tuples. The function iterates through all the rules. It applies the boolean function to the name s and, if it evaluates to True, it returns the label (for all three rules, “female”).</p>
+
+<div data-childcomponent="prediction_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+def final_e(s):
+    return s[-1] == 'e'
+def final_a(s):
+    return s[-1] == 'a'
+def final_i(s):
+    return s[-1] == 'i'
+
+def classify(s, rls):
+    for (f, gender) in rls:
+        if f(s):
+            return gender
+    return "male"
+
+rules = [(final_e, "female"),
+         (final_a, "female"),
+         (final_i, "female")]
+
+print(classify("Mark", rules))
+print(classify("Julie", rules))
+</textarea>
+</div>
+<p>Here’s the same thing in codelens, so you can step through it one line at a time.</p>
+
+<div class="runestone" style="max-width: none;">
+<div class="alert alert-warning cd_section">
+<div id="prediction_3a"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (prediction_3a)</span> </p>
+</div>
+<script type="text/javascript">
+var prediction_3a_trace = {"code": "def final_e(s):\n   return s[-1] == 'e'\ndef final_a(s):\n   return s[-1] == 'a'\ndef final_i(s):\n   return s[-1] == 'i'\n\ndef classify(s, rls):\n   for (f, gender) in rls:\n      if f(s):\n         return gender\n   return \"male\"\n\nrules = [(final_e, \"female\"),\n         (final_a, \"female\"),\n         (final_i, \"female\")]\n\nprint(classify(\"Mark\", rules))\nprint(classify(\"Julie\", rules))", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1]}, "ordered_globals": ["final_e"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2]}, "ordered_globals": ["final_e", "final_a"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3]}, "ordered_globals": ["final_e", "final_a", "final_i"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null]}, "stdout": ""}, {"line": 14, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 15, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 16, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 18, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null], "5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "7": ["TUPLE", ["REF", 2], "female"], "8": ["TUPLE", ["REF", 3], "female"]}, "stdout": ""}, {"line": 8, "event": "call", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark"}, "ordered_varnames": ["s", "rls"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark"}, "ordered_varnames": ["s", "rls"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "final_e", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_e", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_e_f2"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "final_e", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_e", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_e_f2"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 2, "event": "return", "func_name": "final_e", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_e", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark", "__return__": false}, "ordered_varnames": ["s", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_e_f2"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 2]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 3, "event": "call", "func_name": "final_a", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 2]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_a", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_a_f3"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "final_a", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 2]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_a", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_a_f3"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "final_a", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 2]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_a", "is_parent": false, "frame_id": 3, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark", "__return__": false}, "ordered_varnames": ["s", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_a_f3"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 2]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 5, "event": "call", "func_name": "final_i", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_i", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_i_f4"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "final_i", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_i", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_i_f4"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "final_i", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f1"}, {"func_name": "final_i", "is_parent": false, "frame_id": 4, "parent_frame_id_list": [], "encoded_locals": {"s": "Mark", "__return__": false}, "ordered_varnames": ["s", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_i_f4"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 12, "event": "return", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Mark", "gender": "female", "f": ["REF", 3], "__return__": "male"}, "ordered_varnames": ["s", "rls", "f", "gender", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f1"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": ""}, {"line": 19, "event": "step_line", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null], "5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "7": ["TUPLE", ["REF", 2], "female"], "8": ["TUPLE", ["REF", 3], "female"]}, "stdout": "male\n"}, {"line": 8, "event": "call", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie"}, "ordered_varnames": ["s", "rls"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f5"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 9, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie"}, "ordered_varnames": ["s", "rls"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f5"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 10, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f5"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 1, "event": "call", "func_name": "final_e", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f5"}, {"func_name": "final_e", "is_parent": false, "frame_id": 6, "parent_frame_id_list": [], "encoded_locals": {"s": "Julie"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_e_f6"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 2, "event": "step_line", "func_name": "final_e", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f5"}, {"func_name": "final_e", "is_parent": false, "frame_id": 6, "parent_frame_id_list": [], "encoded_locals": {"s": "Julie"}, "ordered_varnames": ["s"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_e_f6"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 2, "event": "return", "func_name": "final_e", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": false, "unique_hash": "classify_f5"}, {"func_name": "final_e", "is_parent": false, "frame_id": 6, "parent_frame_id_list": [], "encoded_locals": {"s": "Julie", "__return__": true}, "ordered_varnames": ["s", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "final_e_f6"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 11, "event": "step_line", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie", "gender": "female", "f": ["REF", 1]}, "ordered_varnames": ["s", "rls", "f", "gender"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f5"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 11, "event": "return", "func_name": "classify", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [{"func_name": "classify", "is_parent": false, "frame_id": 5, "parent_frame_id_list": [], "encoded_locals": {"rls": ["REF", 5], "s": "Julie", "gender": "female", "f": ["REF", 1], "__return__": "female"}, "ordered_varnames": ["s", "rls", "f", "gender", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "classify_f5"}], "heap": {"5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "1": ["FUNCTION", "final_e(s)", null], "7": ["TUPLE", ["REF", 2], "female"], "2": ["FUNCTION", "final_a(s)", null], "8": ["TUPLE", ["REF", 3], "female"], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null]}, "stdout": "male\n"}, {"line": 19, "event": "return", "func_name": "<module>", "globals": {"final_e": ["REF", 1], "final_a": ["REF", 2], "final_i": ["REF", 3], "classify": ["REF", 4], "rules": ["REF", 5]}, "ordered_globals": ["final_e", "final_a", "final_i", "classify", "rules"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "final_e(s)", null], "2": ["FUNCTION", "final_a(s)", null], "3": ["FUNCTION", "final_i(s)", null], "4": ["FUNCTION", "classify(s, rls)", null], "5": ["LIST", ["REF", 6], ["REF", 7], ["REF", 8]], "6": ["TUPLE", ["REF", 1], "female"], "7": ["TUPLE", ["REF", 2], "female"], "8": ["TUPLE", ["REF", 3], "female"]}, "stdout": "male\nfemale\n"}]};
+var prediction_3a_vis;
+
+$(document).ready(function() {
+    try {
+        prediction_3a_vis = new ExecutionVisualizer('prediction_3a',prediction_3a_trace,
+                                    {embeddedMode: true,
+                                    verticalStack: false,
+                                    heightChangeCallback: redrawAllVisualizerArrows,
+                                    codeDivWidth: 500,
+                                    lang : 'py3'
+                                    });
+        attachLoggers(prediction_3a_vis,'prediction_3a');
+        styleButtons('prediction_3a');
+        allVisualizers.push(prediction_3a_vis);
+    } catch (e) {
+        console.log("Failed to Initialize CodeLens component prediction_3a_vis" );
+        console.log(e.toString());
+    }
+
+});
+
+$(document).ready(function() {
+    $("#prediction_3a_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'prediction_3a'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    if (prediction_3a_vis) {
+        prediction_3a_vis.redrawConnectors();
+    }
+});
+</script>
+</div>
+<p>For those of you who preferred lambda expressions when passing a function for the key parameter when sorting, you may find the following, equivalent code, easier to understand.</p>
+
+<div data-childcomponent="prediction_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+def classify(s, rls):
+    for (f, gender) in rls:
+        if f(s):
+            return gender
+    return "male"
+
+rules = [(lambda x: x[-1] == 'e', "female"),
+         (lambda x: x[-1] == 'a', "female"),
+         (lambda x: x[-1] == 'i', "female")]
+print(classify("Mark", rules))
+print(classify("Julie", rules))
+</textarea>
+</div>
+<p>When we call the classify function we can pass a different set of rules. For example, with the rules we have used so far, “Enrique” is incorrectly classified as female. Before checking whether the last letter is e, we can check whether the first two letters are “En”. This leads to correct classification not only of “Enrique” but also “Ender”, “Engelbert”, “Enoch”, and “Enrico”. (Unfortunately, it leads to incorrect classification of “Enrica” and “Enya”.)</p>
+
+<div data-childcomponent="prediction_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=prediction_5 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+          >
+def classify(s, rls):
+    for (f, gender) in rls:
+        if f(s):
+            return gender
+    return "male"
+
+rules = [(lambda x: x[:2] == "En", "male"),
+         (lambda x: x[-1] == 'e', "female"),
+         (lambda x: x[-1] == 'a', "female"),
+         (lambda x: x[-1] == 'i', "female")]
+
+print(classify("Mark", rules))
+print(classify("Julie", rules))
+print(classify("Enrique", rules))
+</textarea>
+</div>
+<p>Note here how important the order of the rules is. If the check for whether the word starts with “En” is not placed at the beginning of the list, the match on the ending letter ‘e’ will cause the classify function to return “female” without ever considering the rule that checks whether the name starts with “En”.</p>
+<p><strong>Check your understanding</strong></p>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Guessing letters in Hangman' data-toggle="tooltip">
+    <a href="hangman_guesser.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="hangman_guesser.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - The Shannon Game: Guessing the Next Letter in a Text' data-toggle="tooltip" >
+    <a href="shannon_guesser.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="shannon_guesser.html" >Next Section - The Shannon Game: Guessing the Next Letter in a Text</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
