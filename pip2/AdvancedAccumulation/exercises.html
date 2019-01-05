@@ -108,14 +108,12 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Extra Exercises" href="ExtraExercises.html" />
-    <link rel="prev" title="Zip" href="zip.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <script type="text/javascript">
   eBookConfig = {};
-  eBookConfig.host = 'https://506w18.learningpython.today' ? 'https://506w18.learningpython.today' : 'http://127.0.0.1:8000';
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.course = 'pip2';
@@ -216,9 +214,9 @@
             <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
           </a>
           <ul class='dropdown-menu'>
-
+            
                 <li><a href='../index.html'>Table of Contents</a></li>
-
+            
             <li><a href='/runestone/static/pip2/genindex.html'>Book Index</a></li>
             <li class="divider"></li>
             <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
@@ -251,17 +249,17 @@
           <ul class="dropdown-menu user-menu">
             <li><span class='loggedinuser'></span></li>
 <!--            <li class="divider"></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
 			<li class="divider"></li> -->
-            <li><a href='https://506w18.learningpython.today/runestone/admin/index'>Instructor's Page</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/assignments/index'>Progress Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
             <li class="divider"></li>
-<!--            <li><a href="https://506w18.learningpython.today/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
-            <li><a href="https://506w18.learningpython.today/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
-            <li><a href="https://506w18.learningpython.today/runestone/default/user/register" id="registerlink">Register</a></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
             <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
           </ul>
         </li>
@@ -299,21 +297,9 @@
 </ul>
 </li>
           <li class="divider-vertical"></li>
-
-
-
-  <li id="relations-prev" title="Previous Chapter - Zip" data-toggle="tooltip">
-    <a href="zip.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-
-  <li id="relations-next" title='Next Chapter - Extra Exercises' data-toggle="tooltip" >
-    <a href="ExtraExercises.html" >
-      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
+        
+        
+          
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -325,9 +311,9 @@
   $('#relations-next').tooltip(opts);
 </script>
         -->
-
+        
           <li></li>
-
+        
       </ul>
 
     </div>
@@ -338,16 +324,16 @@
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content">
-
+  
   <div class="section" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
 <p>Write equivalent code using map instead of the manual accumulation below</p>
 
 <div data-childcomponent="map_exercise_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=map_exercise_1 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=map_exercise_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 things = [3, 5, -4, 7]
 
@@ -361,9 +347,9 @@ print(accum)
 
 <div data-childcomponent="map_exercise_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=map_exercise_2 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=map_exercise_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def lengths(strings):
     """lengths takes a list of strings as input and returns a list of numbers that are the lengths
@@ -386,9 +372,9 @@ myTests().main()
 
 <div data-childcomponent="map_exercise_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=map_exercise_3 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=map_exercise_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def lengths(strings):
     """lengths takes a list of strings as input and returns a list of numbers that are the lengths
@@ -411,9 +397,9 @@ myTests().main()
 
 <div data-childcomponent="listcomp_exercise_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=listcomp_exercise_1 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=listcomp_exercise_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def lengths(strings):
     """lengths takes a list of strings as input and returns a list of numbers that are the lengths
@@ -435,9 +421,9 @@ myTests().main()
 
 <div data-childcomponent="filter_exercise_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=filter_exercise_1 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=filter_exercise_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 things = [3, 5, -4, 7]
 # write code to produce a list of only the positive things, [3, 5, 7], via manual accumulation
@@ -446,9 +432,9 @@ things = [3, 5, -4, 7]
 
 <div data-childcomponent="filter_exercise_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=filter_exercise_2 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=filter_exercise_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 things = [3, 5, -4, 7]
 # write code to produce a list of only the positive things, [3, 5, 7], using the filter function
@@ -457,9 +443,9 @@ things = [3, 5, -4, 7]
 
 <div data-childcomponent="filter_exercise_2a" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=filter_exercise_2a data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=filter_exercise_2a data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 things = [3, 5, -4, 7]
 # write code to produce a list of only the positive things, [3, 5, 7], using a list comprehension
@@ -469,9 +455,9 @@ things = [3, 5, -4, 7]
 
 <div data-childcomponent="filter_exercise_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=filter_exercise_3 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=filter_exercise_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def longwords(strings):
     """Return a shorter list of strings containing only the strings with more than four characters. Use manual accumulation."""
@@ -493,9 +479,9 @@ myTests().main()
 
 <div data-childcomponent="filter_exercise_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=filter_exercise_4 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=filter_exercise_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def longwords(strings):
     """Return a shorter list of strings containing only the strings with more than four characters. Use the filter function."""
@@ -517,9 +503,9 @@ myTests().main()
 
 <div data-childcomponent="listcomp_exercise_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=listcomp_exercise_2 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=listcomp_exercise_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def longwords(strings):
     """Return a shorter list of strings containing only the strings with more than four characters. Use a list comprehension."""
@@ -541,9 +527,9 @@ myTests().main()
 
 <div data-childcomponent="listcomp_exercise_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=listcomp_exercise_3 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=listcomp_exercise_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def longlengths(strings):
     return None
@@ -564,9 +550,9 @@ myTests().main()
 
 <div data-childcomponent="listcomp_exercise_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=listcomp_exercise_4 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=listcomp_exercise_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def longlengths(strings):
     return None
@@ -587,9 +573,9 @@ myTests().main()
 
 <div data-childcomponent="reduce_exercise_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=reduce_exercise_2 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=reduce_exercise_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def sumSquares(L):
     return None
@@ -612,9 +598,9 @@ myTests().main()
 
 <div data-childcomponent="reduce_exercise_3" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=reduce_exercise_3 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=reduce_exercise_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def sumSquares(L):
     return None
@@ -637,9 +623,9 @@ myTests().main()
 
 <div data-childcomponent="reduce_exercise_4" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=reduce_exercise_4 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=reduce_exercise_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 def sumSquares(L):
     return None
@@ -662,9 +648,9 @@ myTests().main()
 
 <div data-childcomponent="zip_exercise_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=zip_exercise_1 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=zip_exercise_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 L1 = [1, 2, 3, 4]
 L2 = [4, 3, 2, 3]
@@ -688,9 +674,9 @@ myTests().main()
 
 <div data-childcomponent="zip_exercise_2" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=zip_exercise_2 data-lang="python"
-      data-timelimit=25000  data-codelens="true"
-    data-audio=''
+<textarea data-component="activecode" id=zip_exercise_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
           >
 L1 = [1, 2, 3, 4]
 L2 = [4, 3, 2, 3]
@@ -713,35 +699,22 @@ myTests().main()
 </div>
 
 
-
-
-  <li id="relations-prev" class="navLink" title='Previous Section - Zip' data-toggle="tooltip">
-    <a href="zip.html" >
-      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
-    </a>
-  </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="zip.html" ></a>
-
-  <li id="relations-next" class="navLink" title='Next Section - Extra Exercises' data-toggle="tooltip" >
-    <a href="ExtraExercises.html" >
-      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
-    </a>
-  </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="ExtraExercises.html" >Next Section - Extra Exercises</a>
+  
+      
 
 <script type="text/javascript">
 
   $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
   $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
+  
 </script>
-
+  
 </div>
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
       <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
-
+      
     </p>
     <p>
         &copy; Copyright 2013 Paul Resnick, Brad Miller, David Ranum, Created using Runestone Interactive.

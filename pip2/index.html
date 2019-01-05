@@ -116,7 +116,7 @@
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <script type="text/javascript">
   eBookConfig = {};
-  eBookConfig.host = 'https://506w18.learningpython.today' ? 'https://506w18.learningpython.today' : 'http://127.0.0.1:8000';
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.course = 'pip2';
@@ -252,17 +252,17 @@
           <ul class="dropdown-menu user-menu">
             <li><span class='loggedinuser'></span></li>
 <!--            <li class="divider"></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
 			<li class="divider"></li> -->
-            <li><a href='https://506w18.learningpython.today/runestone/admin/index'>Instructor's Page</a></li>
-            <li><a href='https://506w18.learningpython.today/runestone/assignments/index'>Progress Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
             <li class="divider"></li>
-<!--            <li><a href="https://506w18.learningpython.today/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
-            <li><a href="https://506w18.learningpython.today/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
-            <li><a href="https://506w18.learningpython.today/runestone/default/user/register" id="registerlink">Register</a></li>
+<!--            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
             <li class='loginout'><a href='#'>Login</a></li> --><!-- correct link populated by addNavbarLoginLink() -->
           </ul>
         </li>
@@ -316,18 +316,12 @@
 <li><a class="reference internal" href="#nested-data-and-nested-iteration">Nested Data and Nested Iteration</a></li>
 <li><a class="reference internal" href="#sorting">Sorting</a></li>
 <li><a class="reference internal" href="#python-modules">Python Modules</a></li>
-<li><a class="reference internal" href="#requests">Requests</a></li>
-<li><a class="reference internal" href="#rest-apis">REST APIs</a></li>
+<li><a class="reference internal" href="#internet-apis">Internet APIs</a></li>
 <li><a class="reference internal" href="#exceptions">Exceptions</a></li>
-<li><a class="reference internal" href="#using-restapis">Using RESTAPIs</a></li>
 <li><a class="reference internal" href="#string-formatting">String Formatting</a></li>
 <li><a class="reference internal" href="#native-interpreter-gotchas">Native Interpreter Gotchas</a></li>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#inheritance">Inheritance</a></li>
-<li><a class="reference internal" href="#more-on-accumulation-map-filter-reduce-list-comprehensions-and-zip">More on Accumulation: Map, Filter, Reduce, List Comprehensions, and Zip</a></li>
-<li><a class="reference internal" href="#the-facebook-graph-api">The FaceBook Graph API</a></li>
-<li><a class="reference internal" href="#apis-using-oauth">APIs Using OAuth</a></li>
-<li><a class="reference internal" href="#pyglet">Pyglet</a></li>
 <li><a class="reference internal" href="#test-cases">Test Cases</a></li>
 <li><a class="reference internal" href="#prediction-and-classification">Prediction and Classification</a></li>
 <li><a class="reference internal" href="#recursion">Recursion</a></li>
@@ -729,38 +723,11 @@
 </ul>
 </div>
 </div>
-<div class="section" id="requests">
-<h1>Requests<a class="headerlink" href="#requests" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="internet-apis">
+<h1>Internet APIs<a class="headerlink" href="#internet-apis" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Requests/intro.html">Requesting data from the Internet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Requests/fetching_a_page.html">Fetching a page</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Requests/fetching_a_page.html#fetching-with-unix-curl">Fetching with UNIX curl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Requests/fetching_a_page.html#fetching-in-python-with-requests-get">Fetching in python with requests.get</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Requests/how_the_Internet_works.html">The Internet: Behind the Scenes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Requests/urls.html">Anatomy of URLs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Requests/http.html">The HTTP protocol</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Requests/requests_details.html">More Details of the Requests Module</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="rest-apis">
-<h1>REST APIs<a class="headerlink" href="#rest-apis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/intro.html">Using REST APIs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/RequestURLs.html">Generating Request URLs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="RESTAPIs/RequestURLs.html#encoding-url-parameters">Encoding URL Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RESTAPIs/RequestURLs.html#using-requests-get-to-encode-url-parameters">Using requests.get to encode URL parameters</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/DebugURLs.html">Debugging calls to requests.get()</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/jsonlib.html">Processing JSON results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/unicode.html">Unicode for non-English characters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/functionswithrestapis.html">Functions with REST APIs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RESTAPIs/requestsCookbook.html">Requests Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InternetAPIs/how_the_Internet_works.html">The Internet: Behind the Scenes</a></li>
 </ul>
 </div>
 </div>
@@ -771,16 +738,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Exceptions/intro-exceptions.html">Raising and Catching Errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Exceptions/using-exceptions.html">When to use try/except</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Exceptions/ExtraExercises.html">Extra Exercises</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="using-restapis">
-<h1>Using RESTAPIs<a class="headerlink" href="#using-restapis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="UsingRESTAPIs/flickr.html">Searching for tags on flickr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UsingRESTAPIs/cachingResponses.html">Caching Response Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UsingRESTAPIs/cachingPattern.html">More about Caching Response Content</a></li>
 </ul>
 </div>
 </div>
@@ -850,77 +807,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Inheritance/TamagotchiRevisited.html">Tamagotchi Revisited</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Inheritance/Exercises.html">Exercises</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Inheritance/ExtraExercises.html">Extra Exercises</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="more-on-accumulation-map-filter-reduce-list-comprehensions-and-zip">
-<h1>More on Accumulation: Map, Filter, Reduce, List Comprehensions, and Zip<a class="headerlink" href="#more-on-accumulation-map-filter-reduce-list-comprehensions-and-zip" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/intro.html">Introduction: Map, Filter, Reduce and List Comprehensions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/map.html">Map</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/filter.html">Filter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/listcomp.html">List Comprehensions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/reduce.html">Reduce</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/zip.html">Zip</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/exercises.html">Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AdvancedAccumulation/ExtraExercises.html">Extra Exercises</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="the-facebook-graph-api">
-<h1>The FaceBook Graph API<a class="headerlink" href="#the-facebook-graph-api" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="FacebookAPI/FBAPI.html">Facebook API Exercises</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="apis-using-oauth">
-<h1>APIs Using OAuth<a class="headerlink" href="#apis-using-oauth" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="APIsWithOAuth/RequestsOAuthLib.html">Requests OAuthLib Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="APIsWithOAuth/TwitterAPI.html">The Twitter API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="APIsWithOAuth/TwitterAPI.html#using-the-provided-code-for-the-twitter-api">Using the provided code for the Twitter API</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="APIsWithOAuth/Paging.html">Paging</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="pyglet">
-<h1>Pyglet<a class="headerlink" href="#pyglet" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/Pyglet.html">Pyglet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/Pyglet.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/Pyglet.html#basics-of-pyglet">Basics of  Pyglet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/Pyglet.html#additional-notes">Additional Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/pygletWindow.html">The pyglet Window class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/pygletWindow.html#application-elements">Application Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/pygletWindow.html#fancier-windows">Fancier Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/eventListener.html">Listening for events</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/eventListener.html#listening-for-key-presses">Listening for Key Presses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/eventListener.html#other-kinds-of-events">Other Kinds of Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/eventListener.html#pyglet-event-loop-revisited">Pyglet event loop revisited</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/windowContents.html">Drawing text and images</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/windowContents.html#the-on-draw-method">The on_draw() method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/windowContents.html#displaying-text">Displaying text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/windowContents.html#displaying-images">Displaying Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pyglet/windowContents.html#displaying-geometric-primitives">Displaying Geometric Primitives</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/sounds.html">Making Sounds</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/jinglingSquare.html">A Movable Sqaure with Jingles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/schedulingEvents.html">Scheduling Periodic Actions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pyglet/Pong.html">Pong</a></li>
 </ul>
 </div>
 </div>
