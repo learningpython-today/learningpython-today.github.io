@@ -44,11 +44,13 @@ RunestoneBase.prototype.logRunEvent = function (eventInfo) {
         eventInfo.save_code = "True"
     }
     if (eBookConfig.useRunestoneServices && eBookConfig.logLevel > 0) {
-        jQuery.post(eBookConfig.ajaxURL + 'runlog', eventInfo) // Log the run event
-            .done((function() {this.forceSave = false; }).bind(this))
-            .fail((function() {alert("WARNING:  Your code was not saved!  Please Try again.");
-                this.forceSave = true; }).bind(this))
+        // jQuery.post(eBookConfig.ajaxURL + 'runlog', eventInfo) // Log the run event
+        //     .done((function() {this.forceSave = false; }).bind(this))
+        //     .fail((function() {alert("WARNING:  Your code was not saved!  Please Try again.");
+        //         this.forceSave = true; }).bind(this))
+        console.log("should not save - not online")
     }
+
     console.log("running " + JSON.stringify(eventInfo));
 };
 
