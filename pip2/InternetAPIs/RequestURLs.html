@@ -108,6 +108,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Debugging calls to requests.get()" href="DebugURLs.html" />
+    <link rel="prev" title="More Details of the Requests Module" href="requests_details.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -121,7 +123,7 @@
   eBookConfig.loginRequired = true;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = true;
+  eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
 </script>
 
@@ -304,6 +306,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - More Details of the Requests Module" data-toggle="tooltip">
+    <a href="requests_details.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Debugging calls to requests.get()' data-toggle="tooltip" >
+    <a href="DebugURLs.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -410,7 +424,7 @@ argument when calling <code class="docutils literal notranslate"><span class="pr
 
             <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="question400_4_1">
-            sc-1-1: How would you request the URL <code class="docutils literal notranslate"><span class="pre">http://bar.com/goodstuff?greet=hi+there&amp;frosted=no</span></code> using the requests module?
+            exceptions-1: How would you request the URL <code class="docutils literal notranslate"><span class="pre">http://bar.com/goodstuff?greet=hi+there&amp;frosted=no</span></code> using the requests module?
             <li data-component="answer"  id="question400_4_1_opt_a">requests.get("http://bar.com/goodstuff", '?", {'greet': 'hi there'}, '&', {'frosted':'no'})</li><li data-component="feedback" id="question400_4_1_opt_a">The ? and the & are added automatically.</li>
             
             <li data-component="answer"  id="question400_4_1_opt_b">requests.get("http://bar.com/", params = {'goodstuff':'?', 'greet':'hi there', 'frosted':'no'})</li><li data-component="feedback" id="question400_4_1_opt_b">goodstuff is part of the base url, not the query params</li>
@@ -428,6 +442,19 @@ argument when calling <code class="docutils literal notranslate"><span class="pr
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - More Details of the Requests Module' data-toggle="tooltip">
+    <a href="requests_details.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="requests_details.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Debugging calls to requests.get()' data-toggle="tooltip" >
+    <a href="DebugURLs.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="DebugURLs.html" >Next Section - Debugging calls to requests.get()</a>
 
 <script type="text/javascript">
 
